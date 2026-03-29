@@ -1,0 +1,47 @@
+name: Feature Request / Suggestion
+description: Suggest an improvement or new feature
+title: "[Suggestion] "
+labels: ["suggestion"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        We value your ideas! Tell us what would make Thunderstorm better.
+
+  - type: dropdown
+    id: area
+    attributes:
+      label: Feature Area
+      description: Which part of the platform does this relate to?
+      options:
+        - Registration / Login
+        - Navigation / Menus
+        - Shop / Products
+        - Community / Forums
+        - Live Streaming
+        - Dashboard / Analytics
+        - Settings / Profile
+        - Payment / Subscriptions
+        - Warehouse / Inventory
+        - German UI / Translations
+        - Other
+    validations:
+      required: true
+
+  - type: textarea
+    id: description
+    attributes:
+      label: What would you like to see?
+      description: Describe the feature or improvement
+      placeholder: "I'd like to be able to..."
+    validations:
+      required: true
+
+  - type: textarea
+    id: use-case
+    attributes:
+      label: Why would this be useful?
+      description: Help us understand the use case or problem this would solve
+      placeholder: "This would help because..."
+    validations:
+      required: false

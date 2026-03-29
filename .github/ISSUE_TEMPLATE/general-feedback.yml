@@ -1,0 +1,50 @@
+name: General Feedback
+description: Share your overall experience or thoughts about the platform
+title: "[Feedback] "
+labels: []
+body:
+  - type: markdown
+    attributes:
+      value: |
+        We appreciate all feedback — positive or critical. Tell us what you think!
+
+  - type: dropdown
+    id: area
+    attributes:
+      label: What part of the platform is this about?
+      description: Select the most relevant area
+      options:
+        - Registration / Login
+        - Navigation / Menus
+        - Shop / Products
+        - Community / Forums
+        - Live Streaming
+        - Dashboard / Analytics
+        - Settings / Profile
+        - Payment / Subscriptions
+        - Overall Experience
+        - Other
+    validations:
+      required: true
+
+  - type: textarea
+    id: feedback
+    attributes:
+      label: Your Feedback
+      description: Tell us what you liked, what confused you, or what could be better
+    validations:
+      required: true
+
+  - type: dropdown
+    id: rating
+    attributes:
+      label: Overall Experience Rating
+      description: How would you rate your experience so far?
+      options:
+        - "5 — Excellent"
+        - "4 — Good"
+        - "3 — Average"
+        - "2 — Below Average"
+        - "1 — Poor"
+    validations:
+      required: false

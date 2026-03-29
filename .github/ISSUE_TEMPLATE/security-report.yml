@@ -1,0 +1,36 @@
+name: Security Concern
+description: Report a security-related issue (non-sensitive only — see instructions)
+title: "[Security] "
+labels: ["security"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        ## Important: Responsible Disclosure
+
+        **If you have found a security vulnerability** (e.g., unauthorized data access, authentication bypass, injection flaw), **do NOT post it here**. This is a public repository.
+
+        Instead, please email us directly at: **ekthunderstorminfo@gmail.com**
+
+        Per the [Alpha Tester Code of Conduct](https://github.com/erso44/Thunderstorm-Feedback#confidentiality), please do not attempt to exploit or share security issues with others.
+
+        ---
+
+        This template is for **non-sensitive security UX concerns** only (e.g., confusing permission messages, unclear password requirements, missing HTTPS indicators).
+
+  - type: textarea
+    id: description
+    attributes:
+      label: What did you observe?
+      description: Describe the security-related UX concern
+      placeholder: "I noticed that..."
+    validations:
+      required: true
+
+  - type: textarea
+    id: context
+    attributes:
+      label: Where did you see this?
+      description: Which page or flow were you on?
+    validations:
+      required: false

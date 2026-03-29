@@ -1,0 +1,104 @@
+name: Bug Report
+description: Report a bug or something that isn't working correctly
+title: "[Bug] "
+labels: []
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thank you for reporting a bug! Please fill in the details below so we can investigate.
+
+        **Before submitting**, please check the [Known Limitations](https://github.com/erso44/Thunderstorm-Feedback#known-limitations) — your issue may already be documented.
+
+  - type: dropdown
+    id: severity
+    attributes:
+      label: Severity
+      description: How severe is this issue?
+      options:
+        - "Critical — Cannot use a core feature (registration, login, page crash)"
+        - "Major — Feature is broken but a workaround exists"
+        - "Minor — Cosmetic or non-blocking issue"
+    validations:
+      required: true
+
+  - type: textarea
+    id: steps
+    attributes:
+      label: Steps to Reproduce
+      description: What did you do to trigger this bug?
+      placeholder: |
+        1. Go to '...'
+        2. Click on '...'
+        3. Scroll down to '...'
+        4. See error
+    validations:
+      required: true
+
+  - type: textarea
+    id: expected
+    attributes:
+      label: Expected Result
+      description: What should have happened?
+    validations:
+      required: true
+
+  - type: textarea
+    id: actual
+    attributes:
+      label: Actual Result
+      description: What actually happened?
+    validations:
+      required: true
+
+  - type: dropdown
+    id: browser
+    attributes:
+      label: Browser
+      description: Which browser are you using?
+      options:
+        - Google Chrome
+        - Mozilla Firefox
+        - Safari
+        - Microsoft Edge
+        - Other
+    validations:
+      required: true
+
+  - type: input
+    id: browser-version
+    attributes:
+      label: Browser Version & OS
+      description: "e.g., Chrome 122 on Windows 11, Safari on macOS 15"
+      placeholder: "Chrome 122 on Windows 11"
+    validations:
+      required: false
+
+  - type: dropdown
+    id: account-type
+    attributes:
+      label: Account Type
+      description: What type of account were you using?
+      options:
+        - User (Member)
+        - Creator / Owner
+        - Not logged in
+    validations:
+      required: true
+
+  - type: input
+    id: username
+    attributes:
+      label: Your Username
+      description: "Optional — helps us check server logs for your session"
+      placeholder: "your-username"
+    validations:
+      required: false
+
+  - type: textarea
+    id: screenshots
+    attributes:
+      label: Screenshots
+      description: Attach screenshots if possible (drag and drop or paste)
+    validations:
+      required: false
