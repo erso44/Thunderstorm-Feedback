@@ -93,6 +93,14 @@ Here is what Thunderstorm looks like — so you know what to expect before divin
 
 ![Forum Page](screenshots/forum.png)
 
+**Product Detail** — view product info, description, price, and add to cart (German labels: "In den Warenkorb" = Add to Cart, "Nicht auf Lager" = Out of Stock):
+
+![Product Detail](screenshots/product-detail.png)
+
+**Shopping Cart (Warenkorb)** — review items before checkout, with order summary and "Zur Kasse" (Go to Checkout) button:
+
+![Shopping Cart](screenshots/cart.png)
+
 **Member Dashboard** — the user view with quick access to Forum, Shop, Live, Orders, Wishlist, and Settings:
 
 ![Member Dashboard](screenshots/dashboard.png)
@@ -450,7 +458,6 @@ The following issues are known and do not need to be reported. We are actively w
 | 5 | **Live streaming shows empty state** | No active live streams exist during alpha. The page loads correctly but shows "0 Streams gefunden" (0 Streams Found). |
 | 6 | **Community member count shows "1"** | All communities display "1" member regardless of actual membership. |
 | 7 | **Minor error on logout** | A brief technical error may flash on screen when logging out. This does not affect functionality — you are logged out successfully. |
-| 8 | **Product detail page may show an error** | Clicking on a product may show "Etwas ist schief gelaufen" (Something went wrong). Try a hard refresh (`Ctrl+Shift+R`). If it persists, it's a temporary deployment issue — you can still browse products from the shop grid. |
 
 ---
 
