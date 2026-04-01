@@ -298,7 +298,7 @@ Test the subscription payment during creator registration.
 
 **Test Scenario: Complete a Subscription Payment**
 1. During creator registration, you will be presented with subscription plans
-2. Select a plan (e.g., Starter at 9.99 EUR/month)
+2. Select a plan (e.g., Starter)
 3. Enter the test card number: `4242 4242 4242 4242` (see [Section 7](#7-payment-testing))
 4. Complete the payment
 5. **Expected**: Payment succeeds. You are redirected to your community dashboard.
@@ -326,8 +326,8 @@ When registering as a Creator, you will choose from these plans:
 
 | Feature | Starter | Pro | Business |
 |---------|---------|-----|----------|
-| **Monthly Price** | 9.99 EUR | 29.99 EUR | 59.99 EUR |
-| **Annual Price** | 95.99 EUR | 287.99 EUR | 575.99 EUR |
+| **Monthly Price** | - | - | - |
+| **Annual Price** | - | - | - |
 | Max Members | 500 | 2,000 | 15,000 |
 | Max Products | 50 | 250 | 3,000 |
 | Storage | 2 GB | 15 GB | 20 GB |
@@ -343,6 +343,7 @@ When registering as a Creator, you will choose from these plans:
 | Warehouse Management | -- | -- | Yes |
 | Analytics | -- | Basic | Full |
 | Custom Domain | -- | -- | Yes |
+| Priority Support | -- | -- | Yes |
 | API Access | -- | Read-only | Full |
 
 **For alpha testing**: All plans work with test payment cards. No real charges will be made. Choose any plan to explore the features available at that tier.
