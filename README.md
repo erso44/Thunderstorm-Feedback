@@ -1,3 +1,463 @@
+# Thunderstorm Platform — Alpha Testing Guide
+
+**Version**: 1.0 | **Date**: March 28, 2026 | **Status**: Alpha
+
+> **ALPHA DISCLAIMER** — Thunderstorm is in active development. Features may change, data may be lost, and some functionality is incomplete. Do not use this platform for real business operations during the alpha period.
+
+---
+
+## Quick Start (2 Minutes)
+
+1. **Open**: [https://ek-thunderstorm.com](https://ek-thunderstorm.com)
+2. **Register**: Click **Registrierung** (Register) — choose "User" for browsing or "Creator" to manage a community
+3. **Explore**:
+   - Browse **Shop** — 660+ products (German names, EUR pricing)
+   - Visit **Forum** — read and create discussion posts
+   - Check **Live** — live streaming section
+4. **Found a bug?** Report it at [GitHub Issues](https://github.com/erso44/Thunderstorm-Feedback/issues) using the template in [Section 11](#11-how-to-report-issues)
+
+> **Note**: The platform UI is in German. See the [German Glossary](#3-platform-navigation--german-glossary) if you need translations.
+
+---
+
+## Table of Contents
+
+1. [Welcome](#1-welcome)
+2. [Getting Started](#2-getting-started)
+3. [Platform Navigation & German Glossary](#3-platform-navigation--german-glossary)
+4. [Features & Test Scenarios](#4-features--test-scenarios)
+5. [User Roles](#5-user-roles)
+6. [Subscription Plans](#6-subscription-plans-for-community-owners)
+7. [Payment Testing](#7-payment-testing)
+8. [Your Data & Privacy](#8-your-data--privacy)
+9. [Alpha Tester Code of Conduct](#9-alpha-tester-code-of-conduct)
+10. [Known Limitations](#10-known-limitations)
+11. [How to Report Issues](#11-how-to-report-issues)
+12. [FAQ](#12-faq)
+13. [Contact](#13-contact)
+14. [Thunderstorm Alpha Feedback](#thunderstorm-alpha-feedback)
+
+---
+
+## 1. Welcome
+
+**Thunderstorm** is a creator-first live commerce platform that combines community management, live streaming, and eCommerce into a single experience. Creators can build communities, sell products, and go live — all from one platform. Members can join communities, participate in forums, browse shops, and watch live streams.
+
+**What is alpha testing?** You are among the first external users to explore Thunderstorm. The platform is approximately 80% production-ready. Your role is to explore features, try real workflows, and report anything that feels broken, confusing, or could be improved.
+
+**What we expect from you:**
+- Spend 30-60 minutes exploring the platform
+- Follow the test scenarios in [Section 4](#4-features--test-scenarios)
+- Report issues using the template in [Section 11](#11-how-to-report-issues)
+- Be honest — critical feedback is the most valuable kind
+
+**What we especially want to learn:**
+- Is the registration flow clear and smooth?
+- Can you navigate the platform despite the German interface?
+- Does the shop browsing experience feel intuitive?
+- Are there any confusing or dead-end screens?
+
+---
+
+## 2. Getting Started
+
+### Platform URL
+
+**[https://ek-thunderstorm.com](https://ek-thunderstorm.com)**
+
+**Recommended browsers**: Google Chrome or Mozilla Firefox (latest version). Other modern browsers should work but are not actively tested.
+
+**Language**: The platform interface is in **German**. A language switcher is available in the navigation area. See [Section 3](#3-platform-navigation--german-glossary) for a full glossary of German terms.
+
+### Option A: Register as a User (Member)
+
+User accounts can browse communities, participate in forums, shop, and watch live streams.
+
+1. Navigate to `https://ek-thunderstorm.com/registration/user`
+2. Fill in:
+   - **Benutzername** (Username) — choose a unique username
+   - **E-Mail** (Email) — your email address
+   - **Passwort** (Password) — see requirements below
+3. Click **Registrieren** (Register)
+4. You will be redirected to the platform
+
+### Option B: Register as a Creator (Community Owner)
+
+Creator accounts get everything a User can do, plus the ability to manage a community, sell products, view analytics, and manage inventory.
+
+1. Navigate to `https://ek-thunderstorm.com/registration/customer`
+2. Fill in your details and choose a community name and type
+3. Select a subscription plan (see [Section 6](#6-subscription-plans-for-community-owners))
+4. Complete payment with a test card (see [Section 7](#7-payment-testing))
+5. You will be redirected to your new community dashboard
+
+### Password Requirements
+
+| Requirement | Minimum |
+|-------------|---------|
+| Length | 8 characters (max 128) |
+| Uppercase letter | At least 1 (A-Z) |
+| Lowercase letter | At least 1 (a-z) |
+| Digit | At least 1 (0-9) |
+| Special character | At least 1 (e.g., !@#$%) |
+
+### Session
+
+Your session stays active for 4 hours and automatically refreshes for up to 7 days. If your session expires, simply log in again at `/login`.
+
+---
+
+## 3. Platform Navigation & German Glossary
+
+### Main Navigation Tabs
+
+| German Label | English | What It Does | Who Can See It |
+|--------------|---------|--------------|----------------|
+| **Dashboard** | Dashboard | Overview with stats and quick actions | Creators only |
+| **Forum** | Forum | Community discussions and posts | Everyone |
+| **Shop** | Shop | Browse and buy products | Everyone |
+| **Live** | Live | Live streaming sessions | Everyone |
+| **Inventar** | Inventory | Stock levels, transfers, alerts | Creators only |
+| **Lager** | Warehouse | Full warehouse management | Creators only |
+| **Analytik** | Analytics | Community and shop metrics | Creators only |
+
+### Common UI Elements
+
+| German Label | English |
+|--------------|---------|
+| **Warenkorb** | Shopping Cart |
+| **Benachrichtigungen** | Notifications |
+| **Einstellungen** | Settings |
+| **Sammlungen** | Collections / Wishlists |
+| **Kasse** | Checkout |
+| **Meine Bestellungen** | My Orders |
+| **Brotkrümelnavigation** | Breadcrumb Navigation |
+
+### Button Labels
+
+| German | English | | German | English |
+|--------|---------|---|--------|---------|
+| Erstellen | Create | | Speichern | Save |
+| Bearbeiten | Edit | | Löschen | Delete |
+| Abbrechen | Cancel | | Bestätigen | Confirm |
+| Weiter | Next | | Zurück | Back |
+| Schließen | Close | | Suchen | Search |
+| Filtern | Filter | | Absenden | Submit |
+| Anmelden | Sign In | | Abmelden | Sign Out |
+| Registrierung | Register | | Änderungen speichern | Save Changes |
+| Bild hochladen | Upload Image | | Entwurf speichern | Save Draft |
+
+### Form Fields
+
+| German | English | | German | English |
+|--------|---------|---|--------|---------|
+| E-Mail-Adresse | Email Address | | Benutzername | Username |
+| Passwort | Password | | Vorname | First Name |
+| Nachname | Last Name | | Beschreibung | Description |
+| Titel | Title | | Telefonnummer | Phone Number |
+| Land | Country | | Stadt | City |
+| Postleitzahl | Postal Code | | Vollständiger Name | Full Name |
+
+### Status Messages
+
+| German | English | | German | English |
+|--------|---------|---|--------|---------|
+| Erfolgreich | Success | | Fehler | Error |
+| Wird geladen... | Loading... | | Fehlgeschlagen | Failed |
+| Ausstehend | Pending | | Aktiv | Active |
+| Bestätigt | Confirmed | | Abgelehnt | Rejected |
+| Genehmigt | Approved | | Inaktiv | Inactive |
+
+### Common Nouns
+
+| German | English | | German | English |
+|--------|---------|---|--------|---------|
+| Produkt | Product | | Bestellung | Order |
+| Beitrag | Post | | Kategorie | Category |
+| Mitglied | Member | | Mitglieder | Members |
+| Nachricht | Message | | Kommentar | Comment |
+| Community | Community | | Stream | Stream |
+
+---
+
+## 4. Features & Test Scenarios
+
+Each feature below includes a guided test scenario. Follow the steps and note the expected result. If what you see differs from the expected result, report it as an issue.
+
+### 4.1 Community Browsing & Creation
+
+Browse existing communities or create your own (Creator accounts).
+
+**Test Scenario: Browse Communities**
+1. Navigate to `/communities`
+2. You should see a list of existing communities with member counts
+3. Click on a community to enter it
+4. **Expected**: Community page loads with forum, shop, and live tabs
+
+### 4.2 Forum / Discussions
+
+Read and participate in community discussions.
+
+**Test Scenario: Create a Forum Post**
+1. Navigate to **Forum** tab within a community
+2. Click on a category (e.g., one of the 4 available categories)
+3. Click **Neuer Beitrag** (New Post)
+4. Enter a title and body text. Try the text editor tools (Fett/Bold, Kursiv/Italic, lists)
+5. Click **Absenden** (Submit)
+6. **Expected**: Your post appears in the category. You can view it and reply to it.
+
+### 4.3 Shop / eCommerce
+
+Browse the product catalog with 660+ products.
+
+**Test Scenario: Browse and Add to Cart**
+1. Navigate to **Shop** tab
+2. Browse products — they have German names and images
+3. Click on a product to view its details page
+4. Click **In den Warenkorb** (Add to Cart)
+5. Click **Warenkorb** (Cart) icon in the top navigation
+6. **Expected**: Product appears in your cart with price in EUR
+7. **Note**: Most products currently show "Nicht auf Lager" (Out of Stock) — see [Known Limitations](#10-known-limitations)
+
+### 4.4 Live Streaming
+
+Explore the live streaming interface.
+
+**Test Scenario: Browse Live Streams**
+1. Navigate to **Live** tab
+2. **Expected**: Page loads with search, sort, and filter options. Currently shows "0 Streams gefunden" (0 Streams Found) — this is expected as no live streams are active during alpha.
+
+### 4.5 Analytics Dashboard (Creators Only)
+
+View community performance metrics.
+
+**Test Scenario: View Analytics**
+1. Navigate to **Analytik** (Analytics) tab
+2. **Expected**: Dashboard loads with up to 12 KPI cards showing community metrics
+3. Try the time filter options and the **Exportieren** (Export) button
+
+### 4.6 Inventory Management (Creators Only)
+
+View and manage product stock levels.
+
+**Test Scenario: Browse Inventory**
+1. Navigate to **Inventar** (Inventory) tab
+2. **Expected**: Inventory dashboard shows product list with stock quantities
+3. Browse through the product list, check stock levels and alerts
+
+### 4.7 Settings & Profile
+
+Update your account settings and preferences.
+
+**Test Scenario: Update Profile**
+1. Click your profile icon (top right) and select **Einstellungen** (Settings)
+2. Update your profile information (bio, display name)
+3. Click **Änderungen speichern** (Save Changes)
+4. **Expected**: Changes are saved. A success message appears.
+
+### 4.8 Payment Flow (Creators Only — Subscription)
+
+Test the subscription payment during creator registration.
+
+**Test Scenario: Complete a Subscription Payment**
+1. During creator registration, you will be presented with subscription plans
+2. Select a plan (e.g., Starter at 11.99 EUR/month)
+3. Enter the test card number: `4242 4242 4242 4242` (see [Section 7](#7-payment-testing))
+4. Complete the payment
+5. **Expected**: Payment succeeds. You are redirected to your community dashboard.
+
+---
+
+## 5. User Roles
+
+| Role | Description | Can Access |
+|------|-------------|------------|
+| **Owner** | Community creator with full control | Everything — Dashboard, Forum, Shop, Inventory, Warehouse, Analytics, Live, Settings |
+| **Admin** | Elevated management access | Dashboard, Forum, Shop, Inventory, Analytics, Settings |
+| **Moderator** | Content moderation | Forum moderation tools, basic platform access |
+| **User** | Standard member | Forum, Shop, Live, Profile, Settings |
+
+**For alpha testing**, we recommend registering as either:
+- **User** (via `/registration/user`) — to test the member experience
+- **Owner** (via `/registration/customer`) — to test the creator/management experience
+
+---
+
+## 6. Subscription Plans (for Community Owners)
+
+When registering as a Creator, you will choose from these plans:
+
+| Feature | Starter | Pro | Business |
+|---------|---------|-----|----------|
+| **Monthly Price** | 9.99 EUR | 29.99 EUR | 59.99 EUR |
+| **Annual Price** | 95.99 EUR | 287.99 EUR | 575.99 EUR |
+| Max Members | 500 | 2,000 | 15,000 |
+| Max Products | 50 | 250 | 3,000 |
+| Storage | 2 GB | 15 GB | 20 GB |
+| Streaming Hours/month | 15 | 80 | 150 |
+| Concurrent Streams | 1 | 2 | 3 |
+| Max Viewers/Stream | 50 | 200 | 500 |
+| Streaming Quality | 720p | 1080p | 1080p |
+| Forum Categories | 10 | 25 | 100 |
+| Moderators | 3 | 10 | 25 |
+| Commission Rate | 20% | 15% | 12% |
+| Replay Retention | 14 days | 30 days | 45 days |
+| Live Commerce | -- | Yes | Yes |
+| Warehouse Management | -- | -- | Yes |
+| Analytics | -- | Basic | Full |
+| Custom Domain | -- | -- | Yes |
+| API Access | -- | Read-only | Full |
+
+**For alpha testing**: All plans work with test payment cards. No real charges will be made. Choose any plan to explore the features available at that tier.
+
+---
+
+## 7. Payment Testing
+
+Thunderstorm uses Stripe in **sandbox (test) mode**. No real money is charged during alpha testing.
+
+**Use only test cards. Do not enter real payment information.**
+
+### Test Card Numbers
+
+| Card Number | Result |
+|-------------|--------|
+| `4242 4242 4242 4242` | Payment succeeds |
+| `4000 0000 0000 0002` | Payment is declined |
+
+**For all test cards, use:**
+- **Expiry**: Any future date (e.g., `12/28`)
+- **CVC**: Any 3 digits (e.g., `123`)
+- **ZIP/Postal code**: Any 5 digits (e.g., `12345`)
+
+All prices are displayed in **EUR**. This is the platform's base currency.
+
+---
+
+## 8. Your Data & Privacy
+
+During the alpha test, we collect:
+- **Account data**: Email address, username, password (encrypted)
+- **Activity data**: Actions you take on the platform (for testing and improvement purposes)
+- **Content**: Any posts, comments, or products you create
+
+**Data retention**: After the alpha test period ends, you may choose to keep your account and data or request full deletion. We will contact all testers before any data changes are made.
+
+**Your rights**:
+- You may request deletion of your account and all associated data at any time
+- To request deletion, contact: ekthunderstorminfo@gmail.com
+- The platform's privacy policy is accessible at [https://ek-thunderstorm.com/privacy-terms](https://ek-thunderstorm.com/privacy-terms)
+
+By participating in this alpha test, you acknowledge the terms above and consent to the collection of data as described for the purpose of platform testing and improvement.
+
+---
+
+## 9. Alpha Tester Code of Conduct
+
+By participating in this alpha test, you agree to:
+
+1. **Use test data only** — Do not enter real personal information beyond your email address. Use fictional names, addresses, and details where prompted.
+2. **Keep it appropriate** — Do not post offensive, harmful, or inappropriate content in forums, communities, or product listings.
+3. **Keep it confidential** — Do not share your access, screenshots, or details about the platform publicly (social media, reviews, blog posts, etc.).
+4. **No automated testing** — Do not perform automated scanning, load testing, penetration testing, or API fuzzing.
+5. **Report responsibly** — If you discover a security issue, report it directly to us (see [Section 13](#13-contact)). Do not attempt to exploit it or share it with others.
+6. **Respect other testers** — Do not access, modify, or delete other testers' accounts, communities, or content.
+
+---
+
+## 10. Known Limitations
+
+The following issues are known and do not need to be reported. We are actively working on fixes.
+
+| # | Issue | Impact |
+|---|-------|--------|
+| 1 | **Most products show "Nicht auf Lager" (Out of Stock)** | Inventory sync issue — 610/660 products appear out of stock. You can still browse and view product details. |
+| 2 | **Checkout may be blocked** | Due to the stock issue above, completing a purchase may fail at the stock reservation step. |
+| 3 | **Shop categories show "Keine Kategorien verfügbar"** | Category filters in the shop sidebar are empty. Use search or browse all products instead. |
+| 4 | **Some labels in English** | "Cooperative" and "Educational" in the community type selector during registration are not yet translated to German. |
+| 5 | **Live streaming shows empty state** | No active live streams exist during alpha. The page loads correctly but shows "0 Streams gefunden" (0 Streams Found). |
+| 6 | **Community member count shows "1"** | All communities display "1" member regardless of actual membership. |
+| 7 | **Minor error on logout** | A brief technical error may flash on screen when logging out. This does not affect functionality — you are logged out successfully. |
+
+---
+
+## 11. How to Report Issues
+
+Found something that is not in the [Known Limitations](#10-known-limitations)? Please report it!
+
+**Where to send**: [GitHub Issues](https://github.com/erso44/Thunderstorm-Feedback/issues) — create a new issue using the template below.
+
+**Response time**: We acknowledge all reports within 48 hours.
+
+### Bug Report Template
+
+Please include the following information:
+
+```
+**Title**: [Short description of the issue]
+
+**Steps to Reproduce**:
+1. [First step]
+2. [Second step]
+3. [What happened]
+
+**Expected Result**: [What should have happened]
+
+**Actual Result**: [What actually happened]
+
+**Browser & Device**: [e.g., Chrome 122 on Windows 11, Safari on iPhone 15]
+
+**Screenshot**: [Attach if possible]
+
+**Your Username**: [So we can check server logs]
+```
+
+### Severity Guide
+
+| Severity | When to Use | Example |
+|----------|-------------|---------|
+| **Critical** | Cannot use a core feature at all | Cannot register, cannot log in, page crashes |
+| **Major** | Feature is broken but a workaround exists | Cannot filter products, but can scroll to find them |
+| **Minor** | Cosmetic or non-blocking issue | Misaligned button, untranslated label, slow loading |
+| **Suggestion** | Idea or improvement | "It would be nice if..." |
+
+---
+
+## 12. FAQ
+
+**Q: Will I be charged real money?**
+A: No. Stripe is in test mode. Use the test card numbers from [Section 7](#7-payment-testing). No real transactions will occur.
+
+**Q: Why is everything in German?**
+A: Thunderstorm targets the German-speaking market. A language switcher is available in the navigation area. See the [German Glossary](#3-platform-navigation--german-glossary) for translations of common terms.
+
+**Q: I cannot see the Dashboard, Analytics, or Inventory tabs.**
+A: These tabs are only visible to Creator/Owner accounts. Register via `/registration/customer` to access them.
+
+**Q: What happens to my data after the alpha?**
+A: After the alpha period, you can choose to keep your account and data or request full deletion. We will contact all testers before any changes are made.
+
+**Q: Can I use the platform on my phone?**
+A: The platform is designed for desktop browsers. Mobile responsiveness may vary during alpha.
+
+**Q: How long does my login session last?**
+A: Your session stays active for up to 7 days. If it expires, log in again at `/login`.
+
+---
+
+## 13. Contact
+
+For questions, issues, or feedback:
+
+- **Contact**: Thunderstorm Team — ekthunderstorminfo@gmail.com
+- **Response time**: Within 48 hours
+
+---
+
+Thank you for helping us test Thunderstorm! Your feedback is invaluable in shaping the platform before public launch. Every bug you find and every suggestion you make helps us build a better experience for creators and their communities.
+
+---
+
 # Thunderstorm Alpha Feedback
 
 Welcome to the feedback hub for the **Thunderstorm** alpha test. This is where you can report bugs, suggest features, and share your experience with the platform.
@@ -34,22 +494,6 @@ For improvement ideas, use the **Feature Request** template instead.
 
 ---
 
-## Known Limitations
-
-The following issues are already known and **do not need to be reported**. We are actively working on fixes.
-
-| # | Issue | Impact |
-|---|-------|--------|
-| 1 | Most products show "Nicht auf Lager" (Out of Stock) | 610/660 products appear out of stock. You can still browse and view product details. |
-| 2 | Checkout may be blocked | Due to the stock issue above, completing a purchase may fail at the stock reservation step. |
-| 3 | Shop categories show "Keine Kategorien verfugbar" | Category filters in the shop sidebar are empty. Use search or browse all products instead. |
-| 4 | Some labels in English | "Cooperative" and "Educational" in the community type selector are not yet translated to German. |
-| 5 | Live streaming shows empty state | No active live streams exist during alpha. The page loads correctly but shows "0 Streams gefunden". |
-| 6 | Community member count shows "1" | All communities display "1" member regardless of actual membership. |
-| 7 | Minor error on logout | A brief technical error may flash on screen when logging out. You are logged out successfully. |
-
----
-
 ## Confidentiality
 
 This alpha test is confidential. By participating, you agree to:
@@ -58,7 +502,7 @@ This alpha test is confidential. By participating, you agree to:
 - **Do not perform** automated scanning, load testing, or penetration testing
 - **Report security issues** via email only — **ekthunderstorminfo@gmail.com** — do not post them as public issues
 
-See the full [Alpha Tester Code of Conduct](https://ek-thunderstorm.com) for details.
+See the full [Alpha Tester Code of Conduct](#9-alpha-tester-code-of-conduct) for details.
 
 ---
 
