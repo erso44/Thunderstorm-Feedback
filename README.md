@@ -1,8 +1,10 @@
 # Thunderstorm Platform — Alpha Testing Guide
 
-**Version**: 1.0 | **Date**: March 28, 2026 | **Status**: Alpha
+Welcome to the Thunderstorm alpha test! You are among the very first people to explore this platform, and your feedback will directly shape the product before public launch. Thank you for taking the time — every bug you find and every impression you share makes a real difference.
 
-> **ALPHA DISCLAIMER** — Thunderstorm is in active development. Features may change, data may be lost, and some functionality is incomplete. Do not use this platform for real business operations during the alpha period.
+**Status**: Alpha | **Started**: March 2026 | **Version**: 1.1
+
+> **ALPHA DISCLAIMER** — Thunderstorm is in active development. Features may change, data may be reset, and some functionality is incomplete. Do not use this platform for real business operations during the alpha period.
 
 ---
 
@@ -14,9 +16,19 @@
    - Browse **Shop** — 660+ products (German names, EUR pricing)
    - Visit **Forum** — read and create discussion posts
    - Check **Live** — live streaming section
-4. **Found a bug?** Report it at [GitHub Issues](https://github.com/erso44/Thunderstorm-Feedback/issues) using the template in [Section 11](#11-how-to-report-issues)
+4. **Found a bug?** Report it at [GitHub Issues](https://github.com/erso44/Thunderstorm-Feedback/issues/new/choose) using the templates provided
 
 > **Note**: The platform UI is in German. See the [German Glossary](#3-platform-navigation--german-glossary) if you need translations.
+
+---
+
+## What's New
+
+| Date | Update |
+|------|--------|
+| April 2026 | Alpha testing guide published. Initial release open to first testers. |
+
+*This section will be updated as we ship fixes and new features based on your feedback.*
 
 ---
 
@@ -33,9 +45,9 @@
 9. [Alpha Tester Code of Conduct](#9-alpha-tester-code-of-conduct)
 10. [Known Limitations](#10-known-limitations)
 11. [How to Report Issues](#11-how-to-report-issues)
-12. [FAQ](#12-faq)
-13. [Contact](#13-contact)
-14. [Thunderstorm Alpha Feedback](#thunderstorm-alpha-feedback)
+12. [Sharing Your Experience](#12-sharing-your-experience)
+13. [FAQ](#13-faq)
+14. [Contact](#14-contact)
 
 ---
 
@@ -45,17 +57,33 @@
 
 **What is alpha testing?** You are among the first external users to explore Thunderstorm. The platform is approximately 80% production-ready. Your role is to explore features, try real workflows, and report anything that feels broken, confusing, or could be improved.
 
-**What we expect from you:**
-- Spend 30-60 minutes exploring the platform
-- Follow the test scenarios in [Section 4](#4-features--test-scenarios)
-- Report issues using the template in [Section 11](#11-how-to-report-issues)
-- Be honest — critical feedback is the most valuable kind
+### What We Ask
 
-**What we especially want to learn:**
+- **Initial session**: Spend 30–60 minutes exploring the platform following the [test scenarios](#4-features--test-scenarios)
+- **Come back**: After we ship updates based on your feedback, we may invite you to re-test. Revisits help us verify that fixes actually work.
+- **Report issues**: Use the [bug report template](#11-how-to-report-issues) — the more detail, the faster we can fix it
+- **Be responsive**: If we follow up on a report you filed, a quick reply helps us resolve it
+- **Be honest**: Critical feedback is the most valuable kind
+
+### What We Especially Want to Learn
+
 - Is the registration flow clear and smooth?
 - Can you navigate the platform despite the German interface?
 - Does the shop browsing experience feel intuitive?
 - Are there any confusing or dead-end screens?
+
+### Alpha Timeline
+
+| Phase | Timeframe | What Happens |
+|-------|-----------|--------------|
+| **Alpha** (current) | March–April 2026 | First external testers explore the platform, report bugs, share feedback |
+| **Fixes & Iteration** | Ongoing | We fix reported issues and ship updates |
+| **Beta** | To be announced | Broader testing with more users and more features |
+| **Public Launch** | To be announced | Platform opens to the public |
+
+### Tester Recognition
+
+Alpha testers who actively participate and provide quality feedback will be recognized in our launch credits. You will also receive early access to new features before they go live for the public.
 
 ---
 
@@ -65,7 +93,16 @@
 
 **[https://ek-thunderstorm.com](https://ek-thunderstorm.com)**
 
-**Recommended browsers**: Google Chrome or Mozilla Firefox (latest version). Other modern browsers should work but are not actively tested.
+### Supported Environments
+
+| Browser | Status | Notes |
+|---------|--------|-------|
+| Google Chrome (latest) | Recommended | Primary testing browser |
+| Mozilla Firefox (latest) | Supported | Fully functional |
+| Microsoft Edge (latest) | Should work | Not actively tested |
+| Safari (latest) | Should work | Not actively tested |
+
+**Platform**: Desktop browsers only. Mobile responsiveness may vary during alpha.
 
 **Language**: The platform interface is in **German**. A language switcher is available in the navigation area. See [Section 3](#3-platform-navigation--german-glossary) for a full glossary of German terms.
 
@@ -261,7 +298,7 @@ Test the subscription payment during creator registration.
 
 **Test Scenario: Complete a Subscription Payment**
 1. During creator registration, you will be presented with subscription plans
-2. Select a plan (e.g., Starter at 11.99 EUR/month)
+2. Select a plan (e.g., Starter at 9.99 EUR/month)
 3. Enter the test card number: `4242 4242 4242 4242` (see [Section 7](#7-payment-testing))
 4. Complete the payment
 5. **Expected**: Payment succeeds. You are redirected to your community dashboard.
@@ -360,8 +397,9 @@ By participating in this alpha test, you agree to:
 2. **Keep it appropriate** — Do not post offensive, harmful, or inappropriate content in forums, communities, or product listings.
 3. **Keep it confidential** — Do not share your access, screenshots, or details about the platform publicly (social media, reviews, blog posts, etc.).
 4. **No automated testing** — Do not perform automated scanning, load testing, penetration testing, or API fuzzing.
-5. **Report responsibly** — If you discover a security issue, report it directly to us (see [Section 13](#13-contact)). Do not attempt to exploit it or share it with others.
+5. **Report responsibly** — If you discover a security issue, report it directly via email (see [Section 14](#14-contact)). Do not attempt to exploit it or share it with others.
 6. **Respect other testers** — Do not access, modify, or delete other testers' accounts, communities, or content.
+7. **Stay responsive** — If we follow up on a bug you reported or ask a clarifying question, please reply when you can. It helps us resolve issues faster.
 
 ---
 
@@ -385,13 +423,22 @@ The following issues are known and do not need to be reported. We are actively w
 
 Found something that is not in the [Known Limitations](#10-known-limitations)? Please report it!
 
-**Where to send**: [GitHub Issues](https://github.com/erso44/Thunderstorm-Feedback/issues) — create a new issue using the template below.
+### Where to Report
 
-**Response time**: We acknowledge all reports within 48 hours.
+Go to [**New Issue**](https://github.com/erso44/Thunderstorm-Feedback/issues/new/choose) and choose the template that fits:
+
+| Template | When to Use |
+|----------|-------------|
+| **Bug Report** | Something isn't working correctly |
+| **Feature Request** | An improvement or new idea |
+| **General Feedback** | Your overall experience or thoughts |
+| **Security Concern** | Non-sensitive security UX issues (for vulnerabilities, email us directly) |
+
+**Response time**: We acknowledge all reports within **48 hours**.
 
 ### Bug Report Template
 
-Please include the following information:
+If you prefer to write your own report, please include:
 
 ```
 **Title**: [Short description of the issue]
@@ -423,7 +470,24 @@ Please include the following information:
 
 ---
 
-## 12. FAQ
+## 12. Sharing Your Experience
+
+Beyond bug reports, we want to hear about your overall experience. You don't need to find a "bug" to give us valuable feedback.
+
+Open a [**General Feedback**](https://github.com/erso44/Thunderstorm-Feedback/issues/new/choose) issue and share your thoughts. Here are some prompts to get you started:
+
+- **What was the most confusing part** of using the platform?
+- **What felt intuitive or well-designed?** What worked the way you expected?
+- **What feature would you most want improved** before public launch?
+- **How was the registration experience?** Smooth? Confusing? Too many steps?
+- **Would you recommend this platform to a creator?** Why or why not?
+- **Any features you expected but didn't find?**
+
+Every piece of feedback — positive or negative — helps us prioritize what to work on next.
+
+---
+
+## 13. FAQ
 
 **Q: Will I be charged real money?**
 A: No. Stripe is in test mode. Use the test card numbers from [Section 7](#7-payment-testing). No real transactions will occur.
@@ -443,75 +507,19 @@ A: The platform is designed for desktop browsers. Mobile responsiveness may vary
 **Q: How long does my login session last?**
 A: Your session stays active for up to 7 days. If it expires, log in again at `/login`.
 
+**Q: How will I know when updates are shipped?**
+A: We will update the [What's New](#whats-new) section at the top of this page and may reach out via email for major changes.
+
 ---
 
-## 13. Contact
+## 14. Contact
 
 For questions, issues, or feedback:
 
-- **Contact**: Thunderstorm Team — ekthunderstorminfo@gmail.com
+- **GitHub Issues**: [erso44/Thunderstorm-Feedback](https://github.com/erso44/Thunderstorm-Feedback/issues) — for bugs, feedback, and feature requests
+- **Email**: ekthunderstorminfo@gmail.com — for security reports, account deletion, or questions outside GitHub
 - **Response time**: Within 48 hours
 
 ---
 
-Thank you for helping us test Thunderstorm! Your feedback is invaluable in shaping the platform before public launch. Every bug you find and every suggestion you make helps us build a better experience for creators and their communities.
-
----
-
-# Thunderstorm Alpha Feedback
-
-Welcome to the feedback hub for the **Thunderstorm** alpha test. This is where you can report bugs, suggest features, and share your experience with the platform.
-
-**Platform URL**: [https://ek-thunderstorm.com](https://ek-thunderstorm.com)
-
----
-
-## How to Report
-
-1. Go to [**New Issue**](https://github.com/erso44/Thunderstorm-Feedback/issues/new/choose)
-2. Choose the template that fits:
-   - **Bug Report** — Something isn't working correctly
-   - **Feature Request** — An improvement or new idea
-   - **General Feedback** — Your overall experience or thoughts
-   - **Security Concern** — Non-sensitive security UX issues (for vulnerabilities, email us directly)
-3. Fill in the form and submit
-
-**Response time**: We acknowledge all reports within **48 hours**.
-
----
-
-## Severity Guide
-
-When reporting bugs, please indicate severity:
-
-| Severity | When to Use | Example |
-|----------|-------------|---------|
-| **Critical** | Cannot use a core feature at all | Cannot register, cannot log in, page crashes |
-| **Major** | Feature is broken but a workaround exists | Cannot filter products, but can scroll to find them |
-| **Minor** | Cosmetic or non-blocking issue | Misaligned button, untranslated label, slow loading |
-
-For improvement ideas, use the **Feature Request** template instead.
-
----
-
-## Confidentiality
-
-This alpha test is confidential. By participating, you agree to:
-
-- **Do not share** screenshots, platform details, or access credentials publicly (social media, blogs, reviews, etc.)
-- **Do not perform** automated scanning, load testing, or penetration testing
-- **Report security issues** via email only — **ekthunderstorminfo@gmail.com** — do not post them as public issues
-
-See the full [Alpha Tester Code of Conduct](#9-alpha-tester-code-of-conduct) for details.
-
----
-
-## Contact
-
-For questions, issues outside of GitHub, or security reports:
-
-**Email**: ekthunderstorminfo@gmail.com
-
----
-
-Thank you for helping us test Thunderstorm! Every bug you find and every suggestion you make helps us build a better experience for creators and their communities.
+Thank you for being part of the Thunderstorm alpha! Your time and feedback are genuinely appreciated. Every report you file, every suggestion you make, and every impression you share helps us build a better platform for creators and their communities.
