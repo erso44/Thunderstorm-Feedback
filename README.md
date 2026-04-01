@@ -450,8 +450,7 @@ The following issues are known and do not need to be reported. We are actively w
 | 5 | **Live streaming shows empty state** | No active live streams exist during alpha. The page loads correctly but shows "0 Streams gefunden" (0 Streams Found). |
 | 6 | **Community member count shows "1"** | All communities display "1" member regardless of actual membership. |
 | 7 | **Minor error on logout** | A brief technical error may flash on screen when logging out. This does not affect functionality — you are logged out successfully. |
-| 8 | **Product detail page may crash** | Clicking on a product in the shop may show "Etwas ist schief gelaufen" (Something went wrong). You can still browse products from the shop grid view. |
-| 9 | **Cart page may crash** | The shopping cart page may show an error. This is related to the product detail issue above and is being investigated. |
+| 8 | **Product detail page may show an error** | Clicking on a product may show "Etwas ist schief gelaufen" (Something went wrong). Try a hard refresh (`Ctrl+Shift+R`). If it persists, it's a temporary deployment issue — you can still browse products from the shop grid. |
 
 ---
 
