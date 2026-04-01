@@ -45,9 +45,10 @@ Welcome to the Thunderstorm alpha test! You are among the very first people to e
 9. [Alpha Tester Code of Conduct](#9-alpha-tester-code-of-conduct)
 10. [Known Limitations](#10-known-limitations)
 11. [How to Report Issues](#11-how-to-report-issues)
-12. [Sharing Your Experience](#12-sharing-your-experience)
-13. [FAQ](#13-faq)
-14. [Contact](#14-contact)
+12. [Troubleshooting](#12-troubleshooting)
+13. [Sharing Your Experience](#13-sharing-your-experience)
+14. [FAQ](#14-faq)
+15. [Contact](#15-contact)
 
 ---
 
@@ -71,6 +72,32 @@ Welcome to the Thunderstorm alpha test! You are among the very first people to e
 - Can you navigate the platform despite the German interface?
 - Does the shop browsing experience feel intuitive?
 - Are there any confusing or dead-end screens?
+
+### Platform Preview
+
+Here is what Thunderstorm looks like — so you know what to expect before diving in.
+
+**Registration Page** — where you create your account (German UI with step-by-step flow):
+
+![Registration Page](screenshots/registration-user.png)
+
+**Creator Dashboard** — the owner view with quick actions, KPIs, and full navigation (Dashboard, Forum, Shop, Inventory, Warehouse, Analytics, Live):
+
+![Creator Dashboard](screenshots/creator-dashboard.png)
+
+**Shop** — browse 660+ products with search, filters, and price range:
+
+![Shop Page](screenshots/shop.png)
+
+**Forum** — community discussions organized by categories:
+
+![Forum Page](screenshots/forum.png)
+
+**Member Dashboard** — the user view with quick access to Forum, Shop, Live, Orders, Wishlist, and Settings:
+
+![Member Dashboard](screenshots/dashboard.png)
+
+---
 
 ### Alpha Timeline
 
@@ -137,6 +164,10 @@ Creator accounts get everything a User can do, plus the ability to manage a comm
 | Lowercase letter | At least 1 (a-z) |
 | Digit | At least 1 (0-9) |
 | Special character | At least 1 (e.g., !@#$%) |
+
+### Multiple Accounts
+
+You can create both a User and a Creator account to test both experiences. Each account requires a **different email address**. You cannot have two accounts with the same email in the same community.
 
 ### Session
 
@@ -398,7 +429,7 @@ By participating in this alpha test, you agree to:
 2. **Keep it appropriate** — Do not post offensive, harmful, or inappropriate content in forums, communities, or product listings.
 3. **Keep it confidential** — Do not share your access, screenshots, or details about the platform publicly (social media, reviews, blog posts, etc.).
 4. **No automated testing** — Do not perform automated scanning, load testing, penetration testing, or API fuzzing.
-5. **Report responsibly** — If you discover a security issue, report it directly via email (see [Section 14](#14-contact)). Do not attempt to exploit it or share it with others.
+5. **Report responsibly** — If you discover a security issue, report it directly via email (see [Section 15](#15-contact)). Do not attempt to exploit it or share it with others.
 6. **Respect other testers** — Do not access, modify, or delete other testers' accounts, communities, or content.
 7. **Stay responsive** — If we follow up on a bug you reported or ask a clarifying question, please reply when you can. It helps us resolve issues faster.
 
@@ -471,7 +502,24 @@ If you prefer to write your own report, please include:
 
 ---
 
-## 12. Sharing Your Experience
+## 12. Troubleshooting
+
+Before reporting an issue, try these quick fixes:
+
+| Problem | Try This |
+|---------|----------|
+| **Page looks broken or outdated** | Hard refresh: `Ctrl + Shift + R` (Windows/Linux) or `Cmd + Shift + R` (Mac) |
+| **Cannot log in** | Check username spelling (case-sensitive). Make sure you selected the correct community. Try clearing cookies for `ek-thunderstorm.com`. |
+| **Session expired unexpectedly** | Log in again at `/login`. Sessions refresh automatically for up to 7 days. |
+| **Buttons don't respond** | Try a different browser (Chrome or Firefox recommended). Disable browser extensions that might interfere. |
+| **Page loads but shows no content** | Wait a few seconds — some data loads asynchronously. If still empty after 10 seconds, report it. |
+| **Error after an update** | We ship fixes regularly. Clear your browser cache or do a hard refresh to get the latest version. |
+
+If none of these help, please [report the issue](#11-how-to-report-issues).
+
+---
+
+## 13. Sharing Your Experience
 
 Beyond bug reports, we want to hear about your overall experience. You don't need to find a "bug" to give us valuable feedback.
 
@@ -488,7 +536,7 @@ Every piece of feedback — positive or negative — helps us prioritize what to
 
 ---
 
-## 13. FAQ
+## 14. FAQ
 
 **Q: Will I be charged real money?**
 A: No. Stripe is in test mode. Use the test card numbers from [Section 7](#7-payment-testing). No real transactions will occur.
@@ -513,7 +561,7 @@ A: We will update the [What's New](#whats-new) section at the top of this page a
 
 ---
 
-## 14. Contact
+## 15. Contact
 
 For questions, issues, or feedback:
 
