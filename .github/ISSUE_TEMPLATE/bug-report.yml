@@ -8,7 +8,7 @@ body:
       value: |
         Thank you for reporting a bug! Please fill in the details below so we can investigate.
 
-        **Before submitting**, please check the [Known Limitations](https://github.com/erso44/Thunderstorm-Feedback#known-limitations) — your issue may already be documented.
+        **Before submitting**, please check the [Troubleshooting section](https://github.com/erso44/Thunderstorm-Feedback#11-troubleshooting) — a quick fix may already be listed.
 
   - type: dropdown
     id: severity
