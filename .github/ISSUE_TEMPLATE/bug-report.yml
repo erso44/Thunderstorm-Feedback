@@ -1,53 +1,53 @@
-name: Bug Report
-description: Report a bug or something that isn't working correctly
-title: "[Bug] "
+name: Fehlermeldung
+description: Melde einen Fehler oder etwas, das nicht richtig funktioniert
+title: "[Fehler] "
 labels: []
 body:
   - type: markdown
     attributes:
       value: |
-        Thank you for reporting a bug! Please fill in the details below so we can investigate.
+        Danke, dass du einen Fehler meldest! Bitte fülle die folgenden Felder aus, damit wir das Problem untersuchen können.
 
-        **Before submitting**, please check the [Troubleshooting section](https://github.com/erso44/Thunderstorm-Feedback#11-troubleshooting) — a quick fix may already be listed.
+        **Bevor du absendest**, schau bitte in den Abschnitt [Fehlerbehebung](https://github.com/erso44/Thunderstorm-Feedback#11-fehlerbehebung) — eine schnelle Lösung ist vielleicht schon aufgeführt.
 
   - type: dropdown
     id: severity
     attributes:
-      label: Severity
-      description: How severe is this issue?
+      label: Schweregrad
+      description: Wie schwerwiegend ist dieses Problem?
       options:
-        - "Critical — Cannot use a core feature (registration, login, page crash)"
-        - "Major — Feature is broken but a workaround exists"
-        - "Minor — Cosmetic or non-blocking issue"
+        - "Kritisch — Eine Kernfunktion ist unbenutzbar (Registrierung, Login, Seitenabsturz)"
+        - "Schwerwiegend — Die Funktion ist defekt, aber es gibt einen Umweg"
+        - "Geringfügig — Kosmetisch oder nicht blockierend"
     validations:
       required: true
 
   - type: textarea
     id: steps
     attributes:
-      label: Steps to Reproduce
-      description: What did you do to trigger this bug?
+      label: Schritte zum Reproduzieren
+      description: Was hast du gemacht, um diesen Fehler auszulösen?
       placeholder: |
-        1. Go to '...'
-        2. Click on '...'
-        3. Scroll down to '...'
-        4. See error
+        1. Gehe zu '...'
+        2. Klicke auf '...'
+        3. Scrolle nach unten zu '...'
+        4. Fehler erscheint
     validations:
       required: true
 
   - type: textarea
     id: expected
     attributes:
-      label: Expected Result
-      description: What should have happened?
+      label: Erwartetes Ergebnis
+      description: Was hätte passieren sollen?
     validations:
       required: true
 
   - type: textarea
     id: actual
     attributes:
-      label: Actual Result
-      description: What actually happened?
+      label: Tatsächliches Ergebnis
+      description: Was ist tatsächlich passiert?
     validations:
       required: true
 
@@ -55,43 +55,43 @@ body:
     id: browser
     attributes:
       label: Browser
-      description: Which browser are you using?
+      description: Welchen Browser benutzt du?
       options:
         - Google Chrome
         - Mozilla Firefox
         - Safari
         - Microsoft Edge
-        - Other
+        - Anderer
     validations:
       required: true
 
   - type: input
     id: browser-version
     attributes:
-      label: Browser Version & OS
-      description: "e.g., Chrome 122 on Windows 11, Safari on macOS 15"
-      placeholder: "Chrome 122 on Windows 11"
+      label: Browser-Version & Betriebssystem
+      description: "z. B. Chrome 122 unter Windows 11, Safari unter macOS 15"
+      placeholder: "Chrome 122 unter Windows 11"
     validations:
       required: false
 
   - type: dropdown
     id: account-type
     attributes:
-      label: Account Type
-      description: What type of account were you using?
+      label: Kontotyp
+      description: Welche Art von Konto hast du verwendet?
       options:
-        - User (Member)
+        - Nutzer (Mitglied)
         - Creator / Owner
-        - Not logged in
+        - Nicht eingeloggt
     validations:
       required: true
 
   - type: input
     id: username
     attributes:
-      label: Your Username
-      description: "Optional — helps us check server logs for your session"
-      placeholder: "your-username"
+      label: Dein Benutzername
+      description: "Optional — hilft uns, die Server-Logs zu deiner Sitzung zu prüfen"
+      placeholder: "dein-benutzername"
     validations:
       required: false
 
@@ -99,6 +99,6 @@ body:
     id: screenshots
     attributes:
       label: Screenshots
-      description: Attach screenshots if possible (drag and drop or paste)
+      description: Hänge nach Möglichkeit Screenshots an (per Drag & Drop oder Einfügen)
     validations:
       required: false

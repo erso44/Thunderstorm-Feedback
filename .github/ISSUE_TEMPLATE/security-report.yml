@@ -1,36 +1,36 @@
-name: Security Concern
-description: Report a security-related issue (non-sensitive only — see instructions)
-title: "[Security] "
+name: Sicherheitsbedenken
+description: Melde ein sicherheitsbezogenes Problem (nur nicht-sensibel — siehe Hinweise)
+title: "[Sicherheit] "
 labels: ["security"]
 body:
   - type: markdown
     attributes:
       value: |
-        ## Important: Responsible Disclosure
+        ## Wichtig: Verantwortungsvolle Offenlegung
 
-        **If you have found a security vulnerability** (e.g., unauthorized data access, authentication bypass, injection flaw), **do NOT post it here**. This is a public repository.
+        **Wenn du eine Sicherheitslücke gefunden hast** (z. B. unbefugten Datenzugriff, Umgehung der Authentifizierung, Injection-Schwachstelle), **poste sie NICHT hier**. Dies ist ein öffentliches Repository.
 
-        Instead, please email us directly at: **ekthunderstorminfo@gmail.com**
+        Schreib uns stattdessen bitte direkt eine E-Mail an: **ekthunderstorminfo@gmail.com**
 
-        Per the [Alpha Tester Code of Conduct](https://github.com/erso44/Thunderstorm-Feedback#9-alpha-tester-code-of-conduct), please do not attempt to exploit or share security issues with others. If in doubt about whether something is sensitive, email us instead of posting.
+        Gemäß dem [Verhaltenskodex für Alpha-Tester](https://github.com/erso44/Thunderstorm-Feedback#9-verhaltenskodex-für-alpha-tester) versuche bitte nicht, Sicherheitsprobleme auszunutzen oder mit anderen zu teilen. Wenn du dir unsicher bist, ob etwas sensibel ist, schreib uns lieber eine E-Mail, anstatt es zu posten.
 
         ---
 
-        This template is for **non-sensitive security UX concerns** only (e.g., confusing permission messages, unclear password requirements, missing HTTPS indicators).
+        Diese Vorlage ist nur für **nicht-sensible sicherheitsbezogene UX-Bedenken** gedacht (z. B. verwirrende Berechtigungsmeldungen, unklare Passwort-Anforderungen, fehlende HTTPS-Hinweise).
 
   - type: textarea
     id: description
     attributes:
-      label: What did you observe?
-      description: Describe the security-related UX concern
-      placeholder: "I noticed that..."
+      label: Was hast du beobachtet?
+      description: Beschreibe das sicherheitsbezogene UX-Bedenken
+      placeholder: "Mir ist aufgefallen, dass ..."
     validations:
       required: true
 
   - type: textarea
     id: context
     attributes:
-      label: Where did you see this?
-      description: Which page or flow were you on?
+      label: Wo hast du das gesehen?
+      description: Auf welcher Seite oder in welchem Ablauf warst du?
     validations:
       required: false

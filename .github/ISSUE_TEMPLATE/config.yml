@@ -1,8 +1,8 @@
 blank_issues_enabled: false
 contact_links:
-  - name: Security Vulnerabilities
+  - name: Sicherheitslücken
     url: mailto:ekthunderstorminfo@gmail.com
-    about: Report security vulnerabilities via email — do not post publicly
-  - name: General Questions
+    about: Melde Sicherheitslücken per E-Mail — nicht öffentlich posten
+  - name: Allgemeine Fragen
     url: mailto:ekthunderstorminfo@gmail.com
-    about: For questions not covered by the templates above
+    about: Für Fragen, die nicht von den obigen Vorlagen abgedeckt sind
