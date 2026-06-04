@@ -1,559 +1,510 @@
-# Thunderstorm — Alpha Testing Guide for Creators
+# Thunderstorm — Alpha-Testanleitung für Creator
 
-Welcome to the Thunderstorm alpha test! You are among the very first creators invited to explore the platform, and your feedback will directly shape the product before public launch. Thank you for taking the time — every bug you find and every impression you share makes a real difference.
+**Thunderstorm ist die Live-Shopping-Plattform für Creator.** Geh live, zeig dein Produkt und verkauf in Echtzeit – deine Community, dein Shop und deine Live-Streams an einem Ort.
 
-**Status**: Alpha | **Started**: May 2026 | **Version**: 2.0
+Willkommen beim Alpha-Test! 🎉 Du gehörst zu den allerersten Creators, die Thunderstorm ausprobieren dürfen. Dein Feedback fließt direkt in das Produkt ein, bevor es offiziell startet. Danke, dass du dir die Zeit nimmst – jeder Fehler, den du findest, und jeder Eindruck, den du teilst, hilft uns wirklich weiter.
 
-> **ALPHA DISCLAIMER** — Thunderstorm is in active development. Features may change, data may be reset, and some functionality is incomplete. Please do not use the platform for real business operations during the alpha period, and use test payment data only (see [Section 7](#7-payment-testing)).
+**Status**: Alpha · **Gestartet**: Mai 2026 · **Version**: 2.1 (deutsche Fassung)
 
----
-
-## Quick Start (2 Minutes)
-
-1. **Open**: [https://ek-thunderstorm.com](https://ek-thunderstorm.com)
-2. **Register as a Creator**: go to `https://ek-thunderstorm.com/registration/customer` and follow the 4-step sign-up.
-3. **Set up your store**: after registering you are guided through the onboarding wizard — profile, store details, payment setup, and your first product.
-4. **Explore**: visit your **Dashboard**, open your **Shop**, browse the **Forum**, and check the **Live** area.
-5. **Found a bug?** Report it on [GitHub Issues](https://github.com/erso44/Thunderstorm-Feedback/issues/new/choose) using the templates provided.
-
-> **Note**: The platform interface is in **German**. See the [German Glossary](#3-platform-navigation--german-glossary) for translations of common terms.
+> **ALPHA-HINWEIS** — Thunderstorm wird gerade aktiv entwickelt. Funktionen können sich ändern, Daten können zurückgesetzt werden, und manches ist noch nicht fertig. Bitte nutze die Plattform in der Testphase nicht für echte Geschäfte und verwende nur Test-Zahlungsdaten (siehe [Abschnitt 7](#7-zahlungstests)).
 
 ---
 
-## What's New
+## Schnellstart (2 Minuten)
 
-| Date | Update |
-|------|--------|
-| May 2026 | Alpha testing guide v2.0 — refocused for creators. Alpha opens to the first invited creators. |
+1. **Öffnen**: [https://ek-thunderstorm.com](https://ek-thunderstorm.com)
+2. **Als Creator registrieren**: Geh auf `https://ek-thunderstorm.com/registration/customer` und folge der Anmeldung in 4 Schritten.
+3. **Shop einrichten**: Nach der Anmeldung führt dich ein Assistent durch die Einrichtung – Profil, Shop-Daten, Zahlungs-Setup und dein erstes Produkt.
+4. **Erkunden**: Schau dir dein **Dashboard** an, öffne deinen **Shop**, stöbere im **Forum** und wirf einen Blick in den **Live**-Bereich.
+5. **Einen Fehler gefunden?** Melde ihn über [GitHub Issues](https://github.com/erso44/Thunderstorm-Feedback/issues/new/choose) mit den vorbereiteten Vorlagen.
 
-*This section will be updated as we ship fixes and features based on your feedback.*
-
----
-
-## Table of Contents
-
-1. [Welcome](#1-welcome)
-2. [Getting Started](#2-getting-started)
-3. [Platform Navigation & German Glossary](#3-platform-navigation--german-glossary)
-4. [Features & Test Scenarios](#4-features--test-scenarios)
-5. [User Roles](#5-user-roles)
-6. [Subscription Plans](#6-subscription-plans)
-7. [Payment Testing](#7-payment-testing)
-8. [Your Data & Privacy](#8-your-data--privacy)
-9. [Alpha Tester Code of Conduct](#9-alpha-tester-code-of-conduct)
-10. [How to Report Issues](#10-how-to-report-issues)
-11. [Troubleshooting](#11-troubleshooting)
-12. [Sharing Your Experience](#12-sharing-your-experience)
-13. [FAQ](#13-faq)
-14. [Contact](#14-contact)
+> **💡 Wichtig – bitte kurz lesen:**
+> **Einige Communities sind schon mit Beispiel-Daten gefüllt.** Wundere dich nicht, wenn du fertige Communities mit Inhalten siehst – das ist **Absicht**, damit die Plattform nicht leer wirkt.
+> **So testest du richtig:** Erstelle als **Creator** deine **eigene** Community und teste dort alles. Möchtest du auch die Sicht eines **Mitglieds** sehen? Melde dich mit einem **zweiten Konto** (andere E-Mail) an und tritt deiner eigenen Community bei. So erlebst du **beide Seiten**.
 
 ---
 
-## 1. Welcome
+## Was ist neu
 
-**Thunderstorm is the live-commerce platform for creators in Germany.** It brings live shopping, community, and your own online storefront together in one place — go live, sell products, build a community, and keep both your audience and your revenue. It is built EU-native: hosted in Germany, DSGVO (GDPR) and BGB compliant by design, with daily EUR payouts via Stripe Connect.
+| Datum | Update |
+|-------|--------|
+| Juni 2026 | Anleitung v2.1 — komplett auf Deutsch, in einfacher Sprache und mit Fokus auf Creator. |
+| Mai 2026 | Anleitung v2.0 — neu ausgerichtet auf Creator. Alpha startet für die ersten eingeladenen Creator. |
 
-As a creator you can build a community, run a shop, manage inventory, broadcast live, and see your analytics — all from one dashboard. Members join your community, take part in the forum, browse your shop, and watch your streams.
-
-**What is alpha testing?** You are among the first external creators to explore Thunderstorm. The platform is far enough along to run real creator workflows end to end — registration, building a community, listing products, going live — but it is pre-launch software. Expect rough edges, and expect us to ship fixes quickly based on what you report.
-
-### What We Ask
-
-- **Initial session**: spend 30–60 minutes exploring the platform, following the [test scenarios](#4-features--test-scenarios).
-- **Come back**: after we ship updates based on your feedback, we may invite you to re-test. Revisits help us confirm that fixes actually work.
-- **Report issues**: use the [issue templates](#10-how-to-report-issues) — the more detail, the faster we can fix it.
-- **Be responsive**: if we follow up on something you reported, a quick reply helps us resolve it.
-- **Be honest**: critical feedback is the most valuable kind.
-
-### What We Especially Want to Learn
-
-- Is the registration and creator-onboarding flow clear and smooth?
-- Can you navigate the platform comfortably despite the German interface?
-- Does setting up a shop and listing a product feel intuitive?
-- Are there any confusing, broken, or dead-end screens?
-
-### Alpha Timeline
-
-| Phase | Timeframe | What Happens |
-|-------|-----------|--------------|
-| **Alpha** (current) | May 2026 | First invited creators explore the platform, report bugs, and share feedback. |
-| **Fixes & Iteration** | Ongoing | We fix reported issues and ship updates. |
-| **Beta** | To be announced | Broader testing with more users and more features. |
-| **Public Launch** | To be announced | The platform opens to the public. |
-
-### Tester Recognition
-
-Creators who actively participate and provide quality feedback will be recognized in our launch credits, and will receive early access to new features before they go live for the public.
+*Dieser Abschnitt wird aktualisiert, sobald wir auf Basis deines Feedbacks Verbesserungen ausliefern.*
 
 ---
 
-## 2. Getting Started
+## Inhaltsverzeichnis
 
-### Platform URL
+1. [Willkommen](#1-willkommen)
+2. [Erste Schritte](#2-erste-schritte)
+3. [Bereiche der Plattform](#3-bereiche-der-plattform)
+4. [Funktionen & Test-Szenarien](#4-funktionen--test-szenarien)
+5. [Nutzerrollen](#5-nutzerrollen)
+6. [Abo-Pläne](#6-abo-pläne)
+7. [Zahlungstests](#7-zahlungstests)
+8. [Deine Daten & Datenschutz](#8-deine-daten--datenschutz)
+9. [Verhaltenskodex für Alpha-Tester](#9-verhaltenskodex-für-alpha-tester)
+10. [Probleme melden](#10-probleme-melden)
+11. [Fehlerbehebung](#11-fehlerbehebung)
+12. [Erfahrungen teilen](#12-erfahrungen-teilen)
+13. [Häufige Fragen (FAQ)](#13-häufige-fragen-faq)
+14. [Kontakt](#14-kontakt)
+
+---
+
+## 1. Willkommen
+
+**Thunderstorm ist die Live-Shopping-Plattform für Creator in Deutschland.** Sie bringt Live-Shopping, Community und deinen eigenen Online-Shop an einem Ort zusammen: Du gehst live, verkaufst Produkte, baust eine Community auf – und behältst dein Publikum und deine Einnahmen. Die Plattform ist von Grund auf für Europa gebaut: gehostet in Deutschland, DSGVO- und BGB-konform, mit täglichen Euro-Auszahlungen über Stripe Connect.
+
+Als Creator kannst du eine Community aufbauen, einen Shop betreiben, deinen Bestand verwalten, live senden und deine Statistiken sehen – alles über ein einziges Dashboard. Mitglieder treten deiner Community bei, machen im Forum mit, stöbern in deinem Shop und schauen deine Streams.
+
+**Was bedeutet Alpha-Test?** Du gehörst zu den ersten Creators von außerhalb, die Thunderstorm ausprobieren. Die Plattform ist schon so weit, dass echte Creator-Abläufe komplett funktionieren – Registrierung, Community aufbauen, Produkte einstellen, live gehen. Aber es ist Vor-Start-Software. Rechne mit kleinen Ecken und Kanten – und damit, dass wir auf Basis deiner Meldungen schnell nachbessern.
+
+### Was wir dich bitten
+
+- **Erste Runde**: Nimm dir 30–60 Minuten Zeit und probiere die Plattform aus, am besten anhand der [Test-Szenarien](#4-funktionen--test-szenarien).
+- **Komm wieder**: Nachdem wir auf Basis deines Feedbacks Updates ausgeliefert haben, laden wir dich vielleicht zum erneuten Testen ein. So prüfen wir, ob die Lösungen wirklich funktionieren.
+- **Melde Probleme**: Nutze die [Vorlagen](#10-probleme-melden) – je mehr Details, desto schneller können wir helfen.
+- **Bleib erreichbar**: Wenn wir bei etwas nachfragen, hilft uns eine kurze Antwort sehr.
+- **Sei ehrlich**: Kritisches Feedback ist das wertvollste.
+
+### Was wir besonders lernen möchten
+
+- Sind die Registrierung und das Creator-Onboarding klar und einfach?
+- Findest du dich auf der Plattform gut zurecht?
+- Fühlt sich das Einrichten eines Shops und das Einstellen eines Produkts intuitiv an?
+- Gibt es verwirrende, kaputte oder „tote" Bildschirme?
+
+### Zeitplan der Alpha
+
+| Phase | Zeitraum | Was passiert |
+|-------|----------|--------------|
+| **Alpha** (aktuell) | Mai 2026 | Erste eingeladene Creator erkunden die Plattform, melden Fehler und geben Feedback. |
+| **Fehlerbehebung & Iteration** | Laufend | Wir beheben gemeldete Probleme und liefern Updates aus. |
+| **Beta** | Wird noch bekannt gegeben | Breiterer Test mit mehr Nutzern und mehr Funktionen. |
+| **Öffentlicher Start** | Wird noch bekannt gegeben | Die Plattform öffnet sich für alle. |
+
+### Anerkennung für Tester
+
+Creator, die aktiv mitmachen und gutes Feedback geben, werden in unseren Start-Credits genannt und bekommen neue Funktionen früher als die Öffentlichkeit.
+
+---
+
+## 2. Erste Schritte
+
+### Adresse der Plattform
 
 **[https://ek-thunderstorm.com](https://ek-thunderstorm.com)**
 
-### Supported Environments
+### Unterstützte Umgebungen
 
-| Browser | Status | Notes |
-|---------|--------|-------|
-| Google Chrome (latest) | Recommended | Primary testing browser |
-| Mozilla Firefox (latest) | Supported | Fully functional |
-| Microsoft Edge (latest) | Should work | Not actively tested |
-| Safari (latest) | Should work | Not actively tested |
+| Browser | Status | Hinweise |
+|---------|--------|----------|
+| Google Chrome (aktuell) | Empfohlen | Haupt-Testbrowser |
+| Mozilla Firefox (aktuell) | Unterstützt | Voll funktionsfähig |
+| Microsoft Edge (aktuell) | Sollte funktionieren | Nicht aktiv getestet |
+| Safari (aktuell) | Sollte funktionieren | Nicht aktiv getestet |
 
-**Platform**: designed for desktop browsers. Mobile responsiveness may vary during alpha.
+**Gerät**: Die Plattform ist für Desktop-Browser gemacht. Auf dem Handy kann die Darstellung in der Alpha noch unterschiedlich sein.
 
-**Language**: the interface is in **German**. A language switcher is available in the navigation area. See [Section 3](#3-platform-navigation--german-glossary) for a glossary of common terms.
+**Sprache**: Die Oberfläche ist auf **Deutsch**. Oben im Navigationsbereich gibt es einen Sprachumschalter.
 
-### Register as a Creator
+### Als Creator registrieren
 
-Creator accounts can manage a community, run a shop, sell products, broadcast live, manage inventory, and view analytics.
+Mit einem Creator-Konto kannst du eine Community verwalten, einen Shop betreiben, Produkte verkaufen, live senden, deinen Bestand verwalten und Statistiken sehen.
 
-1. Go to `https://ek-thunderstorm.com/registration/customer`.
-2. Complete the 4-step sign-up wizard:
-   - **Los geht's (Get started)** — enter your email address to begin.
-   - **Community** — choose your community name, type, and visibility.
-   - **Konto (Account)** — choose your username and password.
-   - **Plan** — choose a subscription plan (see [Section 6](#6-subscription-plans)).
-3. You are then taken into the **creator onboarding wizard** to finish setting up your store (see below).
+1. Geh auf `https://ek-thunderstorm.com/registration/customer`.
+2. Durchlaufe die Anmeldung in 4 Schritten:
+   - **Los geht's** — gib deine E-Mail-Adresse ein, um zu starten.
+   - **Community** — wähle Name, Art und Sichtbarkeit deiner Community.
+   - **Konto** — wähle deinen Benutzernamen und dein Passwort.
+   - **Plan** — wähle einen Abo-Plan (siehe [Abschnitt 6](#6-abo-pläne)).
+3. Danach geht es in den **Creator-Einrichtungs-Assistenten**, der dir beim Aufbau deines Shops hilft (siehe unten).
 
-### Creator Onboarding
+### Creator-Einrichtung (Onboarding)
 
-After registration, the onboarding wizard guides you through setting up your store. It has several steps:
+Nach der Registrierung führt dich der Assistent durch die Einrichtung deines Shops. Er hat mehrere Schritte:
 
-1. **Set up your profile**
-2. **Trader declaration** — your seller status
-3. **Packaging registration (LUCID)** — for commercial sellers
-4. **Authorised representative** — for commercial sellers
-5. **Payment setup (Stripe Connect)** — connect a payout account
-6. **Legal & tax details**
-7. **Choose your username**
-8. **Add your first product**
-9. **Publish your store**
+1. **Profil einrichten**
+2. **Verkäufer-Status angeben** (Händler-Erklärung)
+3. **Verpackungsregistrierung (LUCID)** – für gewerbliche Verkäufer
+4. **Bevollmächtigter** – für gewerbliche Verkäufer
+5. **Zahlungs-Setup (Stripe Connect)** – Auszahlungskonto verbinden
+6. **Rechtliche & steuerliche Angaben**
+7. **Benutzernamen wählen**
+8. **Erstes Produkt anlegen**
+9. **Shop veröffentlichen**
 
-> **Tip for testers**: when asked for your **seller status**, choose **Consumer / private seller** (*Privatverkäufer*) if you are just testing. The business-only compliance steps (packaging registration, authorised representative) then skip automatically — they require real registration numbers you will not have for a test account.
+> **💡 Tipp für Tester**: Wähle beim **Verkäufer-Status** „**Privatverkäufer**", wenn du nur testest. Die Schritte nur für Gewerbliche (Verpackungsregistrierung, Bevollmächtigter) werden dann automatisch übersprungen – sie brauchen echte Registrierungsnummern, die du für ein Testkonto nicht hast.
 
-> **Payment setup matters**: your shop's checkout only works once **Stripe Connect** payment setup is complete. Use test data for this step — see [Section 7](#7-payment-testing).
+> **💳 Zahlungs-Setup ist wichtig**: Die Kasse deines Shops funktioniert erst, wenn das **Stripe-Connect**-Zahlungs-Setup abgeschlossen ist. Nutze dafür Testdaten – siehe [Abschnitt 7](#7-zahlungstests).
 
-> **Region**: creator/seller onboarding currently supports **Germany only**. If you are testing from outside Germany, you will need to use a German address and German test bank details for the payment-setup step.
+> **🌍 Region**: Das Creator-/Verkäufer-Onboarding unterstützt aktuell **nur Deutschland**. Wenn du von außerhalb Deutschlands testest, brauchst du für den Zahlungs-Schritt eine deutsche Adresse und deutsche Test-Bankdaten.
 
-### Register as a Member (optional)
+### Als Mitglied registrieren (optional)
 
-You can also create a **Member** account to test the platform from the buyer's side — browsing communities, taking part in forums, shopping, and watching streams. A Member account is created by **joining an existing community**:
+Du kannst auch ein **Mitglieds-Konto** anlegen, um die Plattform aus Sicht eines Käufers zu testen – Communities ansehen, im Forum mitmachen, einkaufen und Streams schauen. Ein Mitglieds-Konto entsteht, indem du einer **Community beitrittst**:
 
-1. Go to `https://ek-thunderstorm.com/registration/user`.
-2. Choose a community to join, then enter your email address.
+1. Geh auf `https://ek-thunderstorm.com/registration/user`.
+2. Wähle eine Community aus (am besten deine eigene) und gib deine E-Mail-Adresse ein.
 
-To test both perspectives, create one Creator account and one Member account, each with a different email address.
+> **So testest du beide Seiten:** Lege **ein Creator-Konto** und **ein Mitglieds-Konto** mit **unterschiedlichen E-Mail-Adressen** an. Tritt mit dem zweiten Konto deiner **eigenen** Community bei – so siehst du sowohl die Creator- als auch die Mitglieder-Sicht. (Die schon vorhandenen Beispiel-Communities sind nur zur Veranschaulichung da.)
 
-### Password Requirements
+### Passwort-Anforderungen
 
-| Requirement | Rule |
-|-------------|------|
-| Length | 12–128 characters |
-| Uppercase letter | At least 1 (A–Z) |
-| Lowercase letter | At least 1 (a–z) |
-| Digit | At least 1 (0–9) |
-| Special character | At least 1 (for example `! @ # $ % & *`) |
+| Anforderung | Regel |
+|-------------|-------|
+| Länge | 12–128 Zeichen |
+| Großbuchstabe | Mindestens 1 (A–Z) |
+| Kleinbuchstabe | Mindestens 1 (a–z) |
+| Ziffer | Mindestens 1 (0–9) |
+| Sonderzeichen | Mindestens 1 (z. B. `! @ # $ % & *`) |
 
-### Multiple Accounts
+### Mehrere Konten
 
-You can create both a Creator and a Member account to test both experiences. Each account requires a **different email address**.
+Du kannst sowohl ein Creator- als auch ein Mitglieds-Konto anlegen, um beide Erlebnisse zu testen. Jedes Konto braucht eine **eigene E-Mail-Adresse**.
 
-### Session
+### Sitzung (Login)
 
-Your login session stays active and refreshes automatically for up to about a week. If it expires, simply log in again at the platform's login page.
-
----
-
-## 3. Platform Navigation & German Glossary
-
-The platform interface is in German. This glossary translates the terms you will encounter most often.
-
-### Main Navigation Tabs
-
-| German Label | English | What It Does | Who Can See It |
-|--------------|---------|--------------|----------------|
-| **Dashboard** | Dashboard | Overview with stats and quick actions | Creators only |
-| **Forum** | Forum | Community discussions and posts | Everyone |
-| **Shop** | Shop | Browse and buy products | Everyone |
-| **Live** | Live | Live streaming sessions | Everyone |
-| **Inventar** | Inventory | Stock levels, transfers, alerts | Creators only |
-| **Lager** | Warehouse | Warehouse management | Creators only |
-| **Analytik** | Analytics | Community and shop metrics | Creators only |
-
-### Common UI Elements
-
-| German Label | English |
-|--------------|---------|
-| **Warenkorb** | Shopping Cart |
-| **Benachrichtigungen** | Notifications |
-| **Einstellungen** | Settings |
-| **Sammlungen** | Collections / Wishlists |
-| **Kasse** | Checkout |
-| **Meine Bestellungen** | My Orders |
-| **Entdecken** | Discover |
-
-### Button Labels
-
-| German | English | | German | English |
-|--------|---------|---|--------|---------|
-| Erstellen | Create | | Speichern | Save |
-| Bearbeiten | Edit | | Löschen | Delete |
-| Abbrechen | Cancel | | Bestätigen | Confirm |
-| Weiter | Next | | Zurück | Back |
-| Schließen | Close | | Suchen | Search |
-| Filtern | Filter | | Absenden | Submit |
-| Anmelden | Sign In | | Abmelden | Sign Out |
-| Registrieren | Register | | Änderungen speichern | Save Changes |
-| Bild hochladen | Upload Image | | Entwurf speichern | Save Draft |
-
-### Form Fields
-
-| German | English | | German | English |
-|--------|---------|---|--------|---------|
-| E-Mail-Adresse | Email Address | | Benutzername | Username |
-| Passwort | Password | | Vorname | First Name |
-| Nachname | Last Name | | Beschreibung | Description |
-| Titel | Title | | Telefonnummer | Phone Number |
-| Land | Country | | Stadt | City |
-| Postleitzahl | Postal Code | | Vollständiger Name | Full Name |
-
-### Status Messages
-
-| German | English | | German | English |
-|--------|---------|---|--------|---------|
-| Erfolgreich | Success | | Fehler | Error |
-| Wird geladen... | Loading... | | Fehlgeschlagen | Failed |
-| Ausstehend | Pending | | Aktiv | Active |
-| Bestätigt | Confirmed | | Abgelehnt | Rejected |
-| Genehmigt | Approved | | Inaktiv | Inactive |
-
-### Common Nouns
-
-| German | English | | German | English |
-|--------|---------|---|--------|---------|
-| Produkt | Product | | Bestellung | Order |
-| Beitrag | Post | | Kategorie | Category |
-| Mitglied | Member | | Mitglieder | Members |
-| Nachricht | Message | | Kommentar | Comment |
-| Community | Community | | Stream | Stream |
+Deine Anmeldung bleibt aktiv und wird etwa eine Woche lang automatisch verlängert. Falls sie abläuft, melde dich einfach erneut an.
 
 ---
 
-## 4. Features & Test Scenarios
+## 3. Bereiche der Plattform
 
-Each feature below includes a guided test scenario. Follow the steps and note the expected result. If what you see differs from the expected result, report it as an issue.
+Die wichtigsten Bereiche im Überblick:
 
-### 4.1 Your Community
-
-Your community is your home base — created during registration.
-
-**Test Scenario: Review your community**
-1. Open your **Dashboard**.
-2. Confirm your community name and details are correct.
-3. Open the **Entdecken** (Discover) area and find your community in the creator list.
-4. **Expected**: your community appears with its name, description, and member count.
-
-### 4.2 Shop & Products
-
-Set up and browse your shop.
-
-**Test Scenario: List and view a product**
-1. During onboarding you add a first product — or open your **Shop** and create another.
-2. Fill in a product name, description, price (in EUR), and image.
-3. Save the product, then open your **Shop** as a visitor would.
-4. **Expected**: your product appears in the shop with its price in EUR and a product detail page.
-
-### 4.3 Inventory Management
-
-Track stock levels for your products.
-
-**Test Scenario: Browse inventory**
-1. Open the **Inventar** (Inventory) tab.
-2. **Expected**: the inventory dashboard lists your products with their stock quantities and any alerts.
-
-### 4.4 Analytics
-
-See how your community and shop are performing.
-
-**Test Scenario: View analytics**
-1. Open the **Analytik** (Analytics) tab.
-2. **Expected**: the dashboard loads KPI cards with community and shop metrics.
-3. Try the time-filter options and the **Exportieren** (Export) button.
-
-### 4.5 Live Streaming
-
-Explore the live streaming area.
-
-**Test Scenario: Browse the Live area**
-1. Open the **Live** tab.
-2. **Expected**: the page loads with search, sort, and status filters. If no creators are currently streaming, the list is empty — this is normal.
-
-### 4.6 Forum / Discussions
-
-Run and take part in community discussions.
-
-**Test Scenario: Create a forum post**
-1. Open the **Forum** tab within your community.
-2. Choose a category and click **Neuer Beitrag** (New Post).
-3. Enter a title and body text. Try the editor tools (**Fett**/Bold, **Kursiv**/Italic, lists).
-4. Click **Absenden** (Submit).
-5. **Expected**: your post appears in the category, and you can view and reply to it.
-
-### 4.7 Settings & Profile
-
-Update your account settings.
-
-**Test Scenario: Update your profile**
-1. Open **Einstellungen** (Settings) from your profile menu.
-2. Update your profile information (bio, display name).
-3. Click **Änderungen speichern** (Save Changes).
-4. **Expected**: the changes are saved and a success message appears.
-
-### 4.8 Subscription Payment
-
-Test the subscription payment during creator registration.
-
-**Test Scenario: Complete a subscription payment**
-1. During the **Plan** step of registration, choose a **paid plan** (Pro or Business) — the free Starter plan has no payment step.
-2. Enter the test card number `4242 4242 4242 4242` (see [Section 7](#7-payment-testing)).
-3. Complete the payment.
-4. **Expected**: the payment succeeds and you continue into creator onboarding.
+- **Dashboard** – Übersicht mit Zahlen und schnellen Aktionen (nur für Creator).
+- **Forum** – Diskussionen und Beiträge der Community (für alle).
+- **Shop** – Produkte ansehen und kaufen (für alle).
+- **Live** – Live-Streams (für alle).
+- **Inventar** – Bestände, Umlagerungen und Warnungen (nur für Creator).
+- **Lager** – Lagerverwaltung (nur für Creator).
+- **Analytik** – Kennzahlen zu Community und Shop (nur für Creator).
+- **Warenkorb** – deine ausgewählten Produkte vor dem Kauf.
+- **Benachrichtigungen** – Hinweise zu Aktivitäten rund um dein Konto.
+- **Einstellungen** – Profil und Konto anpassen.
+- **Sammlungen** – Merklisten / Wunschlisten.
+- **Kasse** – Bezahlvorgang.
+- **Meine Bestellungen** – deine Käufe und deren Status.
+- **Entdecken** – Communities und Creator finden.
 
 ---
 
-## 5. User Roles
+## 4. Funktionen & Test-Szenarien
 
-| Role | Description | Can Access |
-|------|-------------|------------|
-| **Owner** | Community creator with full control | Everything — Dashboard, Forum, Shop, Inventory, Warehouse, Analytics, Live, Settings |
-| **Admin** | Elevated management access | Dashboard, Forum, Shop, Inventory, Analytics, Settings |
-| **Moderator** | Content moderation | Forum moderation tools, basic platform access |
-| **User** | Standard member | Forum, Shop, Live, Profile, Settings |
+Zu jeder Funktion gibt es ein kleines Test-Szenario. Folge den Schritten und vergleiche mit dem erwarteten Ergebnis. Weicht etwas ab, melde es bitte als Problem.
 
-**For alpha testing**, we recommend registering as an **Owner** (via `/registration/customer`) to test the full creator experience. You can additionally register as a **User** (via `/registration/user`) to see the member experience.
+### 4.1 Deine Community
 
----
+Deine Community ist dein Zuhause – sie entsteht bei der Registrierung.
 
-## 6. Subscription Plans
+**Test-Szenario: Community prüfen**
+1. Öffne dein **Dashboard**.
+2. Prüfe, ob Name und Angaben deiner Community stimmen.
+3. Öffne **Entdecken** und finde deine Community in der Creator-Liste.
+4. **Erwartet**: Deine Community erscheint mit Name, Beschreibung und Mitgliederzahl.
 
-When registering as a Creator, you choose one of these plans:
+### 4.2 Shop & Produkte
 
-| Feature | Starter | Pro | Business |
-|---------|---------|-----|----------|
-| **Monthly price** | Free | €29.99 | €59.99 |
-| **Annual price** | Free | €287.99 | €575.99 |
-| Community members | 500 | 2,000 | 15,000 |
-| Product listings | 50 | 250 | 3,000 |
-| Storage | 2 GB | 15 GB | 20 GB |
-| Live streaming | 720p · 15 hrs/mo | 1080p · 80 hrs/mo | 1080p · 150 hrs/mo |
-| Concurrent streams | 1 | 2 | 3 |
-| Viewers per stream | 50 | 200 | 500 |
-| Forum categories | 10 | 25 | 100 |
-| Moderators | 3 | 10 | 25 |
-| Replay / VOD retention | 14 days | 30 days | 45 days |
-| Live commerce (sell in streams) | — | Yes | Yes |
-| Warehouse management (WMS) | — | — | Yes |
-| Analytics | — | Basic | Full |
-| Custom domain | — | — | Yes |
-| API access | — | Read-only | Full |
+Richte deinen Shop ein und sieh ihn dir an.
 
-**For alpha testing**: all plans work with test payment cards — no real charges are made. The free Starter plan has no payment step; choose Pro or Business if you want to test the subscription payment flow. The current published plan details are always shown on the platform's Pricing page.
+**Test-Szenario: Produkt anlegen und ansehen**
+1. Beim Onboarding legst du ein erstes Produkt an – oder öffne deinen **Shop** und erstelle ein weiteres.
+2. Fülle Name, Beschreibung, Preis (in Euro) und ein Bild aus.
+3. Speichere das Produkt und öffne deinen **Shop** so, wie ihn ein Besucher sieht.
+4. **Erwartet**: Dein Produkt erscheint im Shop mit Preis in Euro und einer Produktseite.
 
----
+### 4.3 Bestandsverwaltung
 
-## 7. Payment Testing
+Behalte die Lagerbestände deiner Produkte im Blick.
 
-Thunderstorm uses Stripe in **sandbox (test) mode** for the alpha. No real money is charged.
+**Test-Szenario: Bestand ansehen**
+1. Öffne den Tab **Inventar**.
+2. **Erwartet**: Die Bestandsübersicht zeigt deine Produkte mit Mengen und eventuellen Warnungen.
 
-> ⚠️ **Never enter real payment data.** Do not enter a real credit/debit card, real IBAN, or real bank account details anywhere on the platform — neither at subscription checkout nor during Stripe Connect payment setup. Use only the test data below.
+### 4.4 Analytik
 
-### Subscription Test Cards
+Sieh, wie sich deine Community und dein Shop entwickeln.
 
-| Card Number | Result |
-|-------------|--------|
-| `4242 4242 4242 4242` | Payment succeeds |
-| `4000 0000 0000 0002` | Payment is declined |
+**Test-Szenario: Statistiken ansehen**
+1. Öffne den Tab **Analytik**.
+2. **Erwartet**: Es laden Kennzahlen-Karten zu Community und Shop.
+3. Probiere die Zeitfilter und den Knopf **Exportieren** aus.
 
-For all test cards:
-- **Expiry**: any future date (for example `12/30`)
-- **CVC**: any 3 digits (for example `123`)
-- **Postal code**: any 5 digits (for example `12345`)
+### 4.5 Live-Streaming
 
-### Stripe Connect Onboarding (Payment Setup)
+Schau dir den Live-Bereich an.
 
-During creator onboarding, the **Payment setup** step opens Stripe's secure onboarding form so you can connect a payout account. In test mode, Stripe expects **test data** — never real personal or banking details. Typical Stripe test values:
+**Test-Szenario: Live-Bereich durchstöbern**
+1. Öffne den Tab **Live**.
+2. **Erwartet**: Die Seite lädt mit Suche, Sortierung und Status-Filtern. Wenn gerade niemand sendet, ist die Liste leer – das ist normal.
 
-- **Phone**: `000 000 0000`
-- **Date of birth**: any date that makes you over 18 (for example `01/01/1990`)
-- **Test German IBAN**: `DE89 3704 0044 0532 0130 00`
+### 4.6 Forum / Diskussionen
 
-> If a field rejects these values, check Stripe's current testing documentation for the latest test data — Stripe occasionally updates it. Remember: creator/seller onboarding currently supports **Germany only**.
+Starte und beteilige dich an Diskussionen.
 
-All prices on the platform are shown in **EUR**.
+**Test-Szenario: Forenbeitrag erstellen**
+1. Öffne den Tab **Forum** in deiner Community.
+2. Wähle eine Kategorie und klicke auf **Neuer Beitrag**.
+3. Gib Titel und Text ein. Probiere die Editor-Werkzeuge (Fett, Kursiv, Listen).
+4. Klicke auf **Absenden**.
+5. **Erwartet**: Dein Beitrag erscheint in der Kategorie, du kannst ihn ansehen und beantworten.
 
----
+### 4.7 Einstellungen & Profil
 
-## 8. Your Data & Privacy
+Aktualisiere deine Konto-Einstellungen.
 
-This is a short summary for alpha testers. The full, authoritative document is the **Privacy Policy** at [https://ek-thunderstorm.com/privacy-terms](https://ek-thunderstorm.com/privacy-terms).
+**Test-Szenario: Profil aktualisieren**
+1. Öffne **Einstellungen** über dein Profilmenü.
+2. Ändere deine Profilangaben (z. B. Beschreibung, Anzeigename).
+3. Klicke auf **Änderungen speichern**.
+4. **Erwartet**: Die Änderungen werden gespeichert und eine Erfolgsmeldung erscheint.
 
-**Data controller.** ThunderLabs UG, Baumensteinstr. 2, 89134 Blaustein, Germany — the controller under Art. 4 No. 7 GDPR. Full company details are in the Impressum at [https://ek-thunderstorm.com/legal-notice](https://ek-thunderstorm.com/legal-notice).
+### 4.8 Abo-Zahlung
 
-**What we process during the alpha.**
-- **Account data** — your email address, username, and password. Your password is never stored in plaintext; it is kept only as a salted hash.
-- **Activity data** — how you use the platform, for testing and improvement purposes.
-- **Content** — any communities, posts, comments, or products you create.
+Teste die Abo-Zahlung während der Creator-Registrierung.
 
-**Legal bases.** Processing for your participation in the alpha test rests on performance of the testing arrangement; activity/usage data is processed on the basis of our legitimate interest in operating, securing, and improving the platform; where the law requires it (for example non-essential cookies), we rely on your consent.
-
-**Payment processing.** Card and payout details you enter are handled by **Stripe**, our payment processor, in test mode during the alpha.
-
-**Retention.** Account data is retained for the lifetime of your account and for 30 days after a deletion request. Usage and analytics data is aggregated or de-identified within 90 days. Tax-relevant records are retained for 10 years where the law requires (§147 AO). We will contact all testers before any data changes are made at the end of the alpha.
-
-**Your rights.** Under the GDPR you have the right to access, rectification, erasure, restriction, data portability, and to object to processing. You also have the right to lodge a complaint with the competent supervisory authority — for ThunderLabs UG this is the *Landesbeauftragte für den Datenschutz und die Informationsfreiheit Baden-Württemberg* (LfDI Baden-Württemberg). To exercise any of these rights, or to request deletion of your account, contact **ekthunderstorminfo@gmail.com**.
-
-By participating in this alpha test, you acknowledge this summary and the full Privacy Policy.
+**Test-Szenario: Abo-Zahlung abschließen**
+1. Wähle im Schritt **Plan** der Registrierung einen **kostenpflichtigen Plan** (Pro oder Business) – der kostenlose Starter-Plan hat keinen Zahlungsschritt.
+2. Gib die Testkarten-Nummer `4242 4242 4242 4242` ein (siehe [Abschnitt 7](#7-zahlungstests)).
+3. Schließe die Zahlung ab.
+4. **Erwartet**: Die Zahlung gelingt und du gelangst weiter ins Creator-Onboarding.
 
 ---
 
-## 9. Alpha Tester Code of Conduct
+## 5. Nutzerrollen
 
-By participating in this alpha test, you agree to:
+| Rolle | Beschreibung | Zugriff |
+|-------|--------------|---------|
+| **Owner** | Community-Gründer mit voller Kontrolle | Alles – Dashboard, Forum, Shop, Inventar, Lager, Analytik, Live, Einstellungen |
+| **Admin** | Erweiterte Verwaltung | Dashboard, Forum, Shop, Inventar, Analytik, Einstellungen |
+| **Moderator** | Inhalte moderieren | Moderations-Werkzeuge im Forum, grundlegender Zugriff |
+| **User** | Normales Mitglied | Forum, Shop, Live, Profil, Einstellungen |
 
-1. **Use test data for sensitive fields.** A real email address is required to register and will be processed as described in [Section 8](#8-your-data--privacy). For optional free-text fields (such as bios or addresses), avoid entering sensitive personal data. **Never enter real payment card, IBAN, or bank details** — Stripe is in test mode; use the test data in [Section 7](#7-payment-testing). Never enter another real person's data.
-2. **Keep it appropriate.** Do not post offensive, harmful, or inappropriate content in forums, communities, or product listings.
-3. **Hold public takes until launch.** Filing bug reports and feedback in this repository is exactly what we want — please do. What we ask you to hold back is posting public reviews, ratings, or social-media takes about the platform: it is pre-launch and changing fast, and we would love your public verdict once we are ready.
-4. **No automated testing.** Do not perform automated scanning, load testing, penetration testing, or API fuzzing.
-5. **Report security issues privately.** If you discover a security vulnerability, email it directly to us (see [Section 14](#14-contact)) — do not post it in a public issue, and do not attempt to exploit it or share it with others. Good-faith reports of issues you come across through normal use of the platform are welcome and will never be held against you; the restriction is only on *active* exploitation or scanning.
-6. **Respect other testers.** Do not access, modify, or delete other testers' accounts, communities, or content.
-7. **Stay responsive.** If we follow up on a report you filed, please reply when you can — it helps us resolve issues faster.
+**Für den Alpha-Test** empfehlen wir, dich als **Owner** zu registrieren (über `/registration/customer`), um das volle Creator-Erlebnis zu testen. Zusätzlich kannst du dich als **User** registrieren (über `/registration/user`), um die Mitglieder-Sicht zu sehen.
 
 ---
 
-## 10. How to Report Issues
+## 6. Abo-Pläne
 
-Found something broken, confusing, or unexpected? Please report it!
+Bei der Creator-Registrierung wählst du einen dieser Pläne:
 
-### Where to Report
+| Funktion | Starter | Pro | Business |
+|----------|---------|-----|----------|
+| **Preis pro Monat** | Kostenlos | 29,99 € | 59,99 € |
+| **Preis pro Jahr** | Kostenlos | 287,99 € | 575,99 € |
+| Community-Mitglieder | 500 | 2.000 | 15.000 |
+| Produkt-Einträge | 50 | 250 | 3.000 |
+| Speicher | 2 GB | 15 GB | 20 GB |
+| Live-Streaming | 720p · 15 Std/Monat | 1080p · 80 Std/Monat | 1080p · 150 Std/Monat |
+| Gleichzeitige Streams | 1 | 2 | 3 |
+| Zuschauer pro Stream | 50 | 200 | 500 |
+| Forenkategorien | 10 | 25 | 100 |
+| Moderatoren | 3 | 10 | 25 |
+| Aufzeichnungen (VOD) | 14 Tage | 30 Tage | 45 Tage |
+| Live-Commerce (im Stream verkaufen) | — | Ja | Ja |
+| Lagerverwaltung (WMS) | — | — | Ja |
+| Analytik | — | Basis | Voll |
+| Eigene Domain | — | — | Ja |
+| API-Zugriff | — | Lesezugriff | Voll |
 
-Go to [**New Issue**](https://github.com/erso44/Thunderstorm-Feedback/issues/new/choose) and choose the template that fits:
+**Für den Alpha-Test**: Alle Pläne funktionieren mit Test-Zahlungskarten – es wird **kein echtes Geld** abgebucht. Der kostenlose Starter-Plan hat keinen Zahlungsschritt; wähle Pro oder Business, wenn du die Abo-Zahlung testen möchtest. Die aktuell gültigen Plan-Details stehen immer auf der Preis-Seite der Plattform.
 
-| Template | When to Use |
-|----------|-------------|
-| **Bug Report** | Something isn't working correctly |
-| **Feature Request** | An improvement or new idea |
-| **General Feedback** | Your overall experience or thoughts |
-| **Security Concern** | Non-sensitive security UX issues (for vulnerabilities, email us directly) |
+---
 
-**Response time**: we acknowledge all reports within **48 hours**.
+## 7. Zahlungstests
 
-### Bug Report Template
+Thunderstorm nutzt Stripe im **Sandbox- (Test-) Modus** für die Alpha. Es wird **kein echtes Geld** abgebucht.
 
-If you prefer to write your own report, please include:
+> ⚠️ **Gib niemals echte Zahlungsdaten ein.** Verwende nirgends eine echte Kredit-/EC-Karte, eine echte IBAN oder echte Bankdaten – weder an der Abo-Kasse noch beim Stripe-Connect-Zahlungs-Setup. Nutze nur die Testdaten unten.
+
+### Test-Karten fürs Abo
+
+| Kartennummer | Ergebnis |
+|--------------|----------|
+| `4242 4242 4242 4242` | Zahlung gelingt |
+| `4000 0000 0000 0002` | Zahlung wird abgelehnt |
+
+Für alle Testkarten:
+- **Ablaufdatum**: ein beliebiges Datum in der Zukunft (z. B. `12/30`)
+- **CVC**: beliebige 3 Ziffern (z. B. `123`)
+- **PLZ**: beliebige 5 Ziffern (z. B. `12345`)
+
+### Stripe-Connect-Einrichtung (Zahlungs-Setup)
+
+Beim Creator-Onboarding öffnet der Schritt **Zahlungs-Setup** das sichere Formular von Stripe, damit du ein Auszahlungskonto verbindest. Im Testmodus erwartet Stripe **Testdaten** – niemals echte persönliche oder Bankdaten. Typische Stripe-Testwerte:
+
+- **Telefon**: `000 000 0000`
+- **Geburtsdatum**: ein Datum, das dich über 18 macht (z. B. `01/01/1990`)
+- **Test-IBAN (Deutschland)**: `DE89 3704 0044 0532 0130 00`
+
+> Falls ein Feld diese Werte ablehnt, schau in die aktuelle Stripe-Testdokumentation – Stripe ändert die Testdaten gelegentlich. Denk daran: Das Creator-/Verkäufer-Onboarding unterstützt aktuell **nur Deutschland**.
+
+Alle Preise auf der Plattform werden in **Euro (EUR)** angezeigt.
+
+---
+
+## 8. Deine Daten & Datenschutz
+
+Dies ist eine kurze Zusammenfassung für Alpha-Tester. Das vollständige, maßgebliche Dokument ist die **Datenschutzerklärung** unter [https://ek-thunderstorm.com/privacy-terms](https://ek-thunderstorm.com/privacy-terms).
+
+**Verantwortlicher.** ThunderLabs UG, Baumensteinstr. 2, 89134 Blaustein, Deutschland – Verantwortlicher im Sinne von Art. 4 Nr. 7 DSGVO. Vollständige Angaben findest du im Impressum unter [https://ek-thunderstorm.com/legal-notice](https://ek-thunderstorm.com/legal-notice).
+
+**Was wir während der Alpha verarbeiten.**
+- **Kontodaten** – deine E-Mail-Adresse, dein Benutzername und dein Passwort. Dein Passwort wird nie im Klartext gespeichert, sondern nur als gesalzener Hash.
+- **Aktivitätsdaten** – wie du die Plattform nutzt, zu Test- und Verbesserungszwecken.
+- **Inhalte** – Communities, Beiträge, Kommentare oder Produkte, die du erstellst.
+
+**Rechtsgrundlagen.** Die Verarbeitung für deine Teilnahme am Alpha-Test stützt sich auf die Durchführung der Testvereinbarung; Aktivitäts-/Nutzungsdaten verarbeiten wir auf Grundlage unseres berechtigten Interesses am Betrieb, an der Sicherheit und an der Verbesserung der Plattform; wo das Gesetz es verlangt (z. B. bei nicht notwendigen Cookies), stützen wir uns auf deine Einwilligung.
+
+**Zahlungsabwicklung.** Karten- und Auszahlungsdaten, die du eingibst, werden von **Stripe**, unserem Zahlungsdienstleister, im Testmodus verarbeitet.
+
+**Aufbewahrung.** Kontodaten werden für die Lebensdauer deines Kontos und 30 Tage nach einem Löschantrag aufbewahrt. Nutzungs- und Analysedaten werden innerhalb von 90 Tagen aggregiert oder anonymisiert. Steuerlich relevante Unterlagen werden 10 Jahre aufbewahrt, wo das Gesetz es verlangt (§147 AO). Wir kontaktieren alle Tester, bevor am Ende der Alpha Daten geändert werden.
+
+**Deine Rechte.** Nach der DSGVO hast du das Recht auf Auskunft, Berichtigung, Löschung, Einschränkung, Datenübertragbarkeit und Widerspruch gegen die Verarbeitung. Außerdem hast du das Recht, dich bei der zuständigen Aufsichtsbehörde zu beschweren – für die ThunderLabs UG ist das die *Landesbeauftragte für den Datenschutz und die Informationsfreiheit Baden-Württemberg* (LfDI Baden-Württemberg). Um eines dieser Rechte auszuüben oder die Löschung deines Kontos zu beantragen, schreib an **ekthunderstorminfo@gmail.com**.
+
+Mit der Teilnahme an diesem Alpha-Test bestätigst du diese Zusammenfassung und die vollständige Datenschutzerklärung.
+
+---
+
+## 9. Verhaltenskodex für Alpha-Tester
+
+Mit der Teilnahme an diesem Alpha-Test erklärst du dich einverstanden:
+
+1. **Nutze Testdaten für sensible Felder.** Eine echte E-Mail-Adresse ist für die Registrierung nötig und wird wie in [Abschnitt 8](#8-deine-daten--datenschutz) beschrieben verarbeitet. Bei optionalen Freitextfeldern (z. B. Beschreibung oder Adresse) vermeide echte persönliche Daten. **Gib niemals echte Karten-, IBAN- oder Bankdaten ein** – Stripe ist im Testmodus; nutze die Testdaten aus [Abschnitt 7](#7-zahlungstests). Gib niemals die echten Daten einer anderen Person ein.
+2. **Bleib angemessen.** Poste keine beleidigenden, schädlichen oder unangemessenen Inhalte in Foren, Communities oder Produkten.
+3. **Halte öffentliche Bewertungen bis zum Start zurück.** Fehlermeldungen und Feedback in diesem Repository sind genau das, was wir uns wünschen – bitte mach das. Was wir dich bitten zurückzuhalten: öffentliche Bewertungen, Rezensionen oder Social-Media-Beiträge über die Plattform. Sie ist Vor-Start-Software und ändert sich schnell – dein öffentliches Urteil hören wir gern, sobald wir bereit sind.
+4. **Kein automatisiertes Testen.** Führe kein automatisches Scannen, keine Lasttests, keine Penetrationstests und kein API-Fuzzing durch.
+5. **Melde Sicherheitsprobleme vertraulich.** Wenn du eine Sicherheitslücke findest, schick sie uns direkt per E-Mail (siehe [Abschnitt 14](#14-kontakt)) – poste sie nicht in einem öffentlichen Issue, nutze sie nicht aus und teile sie nicht mit anderen. Gutgläubige Hinweise auf Dinge, die dir bei normaler Nutzung auffallen, sind willkommen und werden dir nie zum Nachteil ausgelegt; die Einschränkung gilt nur für *aktives* Ausnutzen oder Scannen.
+6. **Respektiere andere Tester.** Greife nicht auf Konten, Communities oder Inhalte anderer Tester zu, ändere oder lösche sie nicht.
+7. **Bleib erreichbar.** Wenn wir zu einer Meldung von dir nachfragen, antworte bitte, wenn du kannst – das hilft uns, Probleme schneller zu lösen.
+
+---
+
+## 10. Probleme melden
+
+Etwas kaputt, verwirrend oder unerwartet? Bitte melde es!
+
+### Wo melden
+
+Geh auf [**New Issue**](https://github.com/erso44/Thunderstorm-Feedback/issues/new/choose) und wähle die passende Vorlage:
+
+| Vorlage | Wann nutzen |
+|---------|-------------|
+| **Bug Report** | Etwas funktioniert nicht richtig |
+| **Feature Request** | Eine Verbesserung oder eine neue Idee |
+| **General Feedback** | Dein Gesamteindruck oder deine Gedanken |
+| **Security Concern** | Unkritische Sicherheits-/UX-Themen (Sicherheitslücken bitte direkt per E-Mail) |
+
+**Antwortzeit**: Wir bestätigen jede Meldung innerhalb von **48 Stunden**.
+
+### Vorlage für eine Fehlermeldung
+
+Wenn du lieber selbst schreibst, gib bitte an:
 
 ```
-**Title**: [Short description of the issue]
+**Titel**: [Kurze Beschreibung des Problems]
 
-**Steps to Reproduce**:
-1. [First step]
-2. [Second step]
-3. [What happened]
+**Schritte zum Nachstellen**:
+1. [Erster Schritt]
+2. [Zweiter Schritt]
+3. [Was passiert ist]
 
-**Expected Result**: [What should have happened]
+**Erwartetes Ergebnis**: [Was hätte passieren sollen]
 
-**Actual Result**: [What actually happened]
+**Tatsächliches Ergebnis**: [Was tatsächlich passiert ist]
 
-**Browser & Device**: [e.g., Chrome 122 on Windows 11]
+**Browser & Gerät**: [z. B. Chrome 122 unter Windows 11]
 
-**Screenshot**: [Attach if possible]
+**Screenshot**: [Wenn möglich anhängen]
 
-**Your Username**: [Optional — helps us check server logs. If you'd rather not post it publicly, email it to us instead.]
+**Dein Benutzername**: [Optional — hilft uns beim Prüfen der Server-Logs. Wenn du ihn nicht öffentlich posten möchtest, schick ihn uns per E-Mail.]
 ```
 
-### Severity Guide
+### Schweregrad-Leitfaden
 
-| Severity | When to Use | Example |
-|----------|-------------|---------|
-| **Critical** | Cannot use a core feature at all | Cannot register, cannot log in, page crashes |
-| **Major** | Feature is broken but a workaround exists | Cannot filter products, but can scroll to find them |
-| **Minor** | Cosmetic or non-blocking issue | Misaligned button, untranslated label, slow loading |
-| **Suggestion** | Idea or improvement | "It would be nice if..." |
-
----
-
-## 11. Troubleshooting
-
-Before reporting an issue, try these quick fixes:
-
-| Problem | Try This |
-|---------|----------|
-| **Page looks broken or outdated** | Hard refresh: `Ctrl + Shift + R` (Windows/Linux) or `Cmd + Shift + R` (Mac) |
-| **Cannot log in** | Check your username spelling (case-sensitive). Try clearing cookies for `ek-thunderstorm.com`. |
-| **Session expired unexpectedly** | Log in again. Sessions refresh automatically for up to about a week. |
-| **Buttons don't respond** | Try a different browser (Chrome or Firefox recommended). Disable browser extensions that might interfere. |
-| **Page loads but shows no content** | Wait a few seconds — some data loads asynchronously. If still empty after about 10 seconds, report it. |
-| **Error after an update** | We ship fixes regularly. Clear your browser cache or do a hard refresh to get the latest version. |
-
-If none of these help, please [report the issue](#10-how-to-report-issues).
+| Schweregrad | Wann nutzen | Beispiel |
+|-------------|-------------|----------|
+| **Kritisch** | Eine Kernfunktion ist gar nicht nutzbar | Registrierung/Login nicht möglich, Seite stürzt ab |
+| **Schwer** | Funktion kaputt, aber es gibt einen Umweg | Produkte lassen sich nicht filtern, aber durch Scrollen finden |
+| **Gering** | Optischer oder nicht blockierender Fehler | Verrutschter Knopf, fehlende Übersetzung, langsames Laden |
+| **Vorschlag** | Idee oder Verbesserung | „Schön wäre, wenn …" |
 
 ---
 
-## 12. Sharing Your Experience
+## 11. Fehlerbehebung
 
-Beyond bug reports, we want to hear about your overall experience — you don't need to find a "bug" to give us valuable feedback.
+Bevor du ein Problem meldest, probiere diese schnellen Lösungen:
 
-Open a [**General Feedback**](https://github.com/erso44/Thunderstorm-Feedback/issues/new/choose) issue and share your thoughts. Some prompts to get you started:
+| Problem | Versuch das |
+|---------|-------------|
+| **Seite sieht kaputt oder veraltet aus** | Neu laden mit `Strg + Umschalt + R` (Windows/Linux) oder `Cmd + Umschalt + R` (Mac) |
+| **Login klappt nicht** | Schreibweise des Benutzernamens prüfen (Groß-/Kleinschreibung beachten). Cookies für `ek-thunderstorm.com` löschen. |
+| **Sitzung unerwartet abgelaufen** | Erneut anmelden. Sitzungen verlängern sich automatisch für etwa eine Woche. |
+| **Knöpfe reagieren nicht** | Anderen Browser probieren (Chrome oder Firefox empfohlen). Browser-Erweiterungen deaktivieren, die stören könnten. |
+| **Seite lädt, zeigt aber keinen Inhalt** | Ein paar Sekunden warten – manche Daten laden im Hintergrund. Nach ca. 10 Sekunden noch leer? Bitte melden. |
+| **Fehler nach einem Update** | Wir liefern regelmäßig Updates. Browser-Cache leeren oder neu laden, um die neueste Version zu bekommen. |
 
-- **What was the most confusing part** of using the platform?
-- **What felt intuitive or well-designed?** What worked the way you expected?
-- **What feature would you most want improved** before public launch?
-- **How was the registration and onboarding experience?** Smooth? Confusing? Too many steps?
-- **Would you recommend this platform to another creator?** Why or why not?
-- **Any features you expected as a creator but didn't find?**
-
-Every piece of feedback — positive or critical — helps us prioritize what to work on next.
-
----
-
-## 13. FAQ
-
-**Q: Will I be charged real money?**
-A: No. Stripe is in test mode for the alpha. As long as you use the test data in [Section 7](#7-payment-testing), no real transaction occurs.
-
-**Q: Why is everything in German?**
-A: Thunderstorm targets the German-speaking market. A language switcher is available in the navigation area. See the [German Glossary](#3-platform-navigation--german-glossary) for translations of common terms.
-
-**Q: I cannot see the Dashboard, Analytics, or Inventory tabs.**
-A: These are only visible to Creator/Owner accounts. Register via `/registration/customer` to access them.
-
-**Q: My shop checkout isn't working.**
-A: Your shop's checkout only works once you have completed **Stripe Connect** payment setup during creator onboarding. See [Section 2](#2-getting-started).
-
-**Q: Can I test from outside Germany?**
-A: You can browse the platform from anywhere, but creator/seller onboarding currently supports **Germany only** — you will need a German address and German test bank details for the payment-setup step.
-
-**Q: What happens to my data after the alpha?**
-A: After the alpha period you can choose to keep your account and data or request full deletion. We will contact all testers before any changes are made. See [Section 8](#8-your-data--privacy).
-
-**Q: Can I use the platform on my phone?**
-A: The platform is designed for desktop browsers. Mobile responsiveness may vary during alpha.
-
-**Q: How will I know when updates are shipped?**
-A: We will update the [What's New](#whats-new) section at the top of this page and may reach out by email for major changes.
+Wenn nichts davon hilft, [melde das Problem bitte](#10-probleme-melden).
 
 ---
 
-## 14. Contact
+## 12. Erfahrungen teilen
 
-For questions, issues, or feedback:
+Über Fehlermeldungen hinaus möchten wir von deinem Gesamteindruck hören – du musst keinen „Bug" finden, um wertvolles Feedback zu geben.
 
-- **GitHub Issues**: [erso44/Thunderstorm-Feedback](https://github.com/erso44/Thunderstorm-Feedback/issues) — for bugs, feedback, and feature requests.
-- **Email**: ekthunderstorminfo@gmail.com — for security reports, account deletion, privacy requests, or questions outside GitHub.
-- **Response time**: within 48 hours.
+Öffne ein [**General Feedback**](https://github.com/erso44/Thunderstorm-Feedback/issues/new/choose)-Issue und teile deine Gedanken. Ein paar Anstöße:
+
+- **Was war am verwirrendsten** bei der Nutzung?
+- **Was fühlte sich gut gemacht oder intuitiv an?** Was funktionierte wie erwartet?
+- **Welche Funktion würdest du am ehesten verbessern** wollen, bevor es öffentlich startet?
+- **Wie war die Registrierung und das Onboarding?** Flüssig? Verwirrend? Zu viele Schritte?
+- **Würdest du die Plattform einem anderen Creator empfehlen?** Warum oder warum nicht?
+- **Hast du als Creator Funktionen erwartet, aber nicht gefunden?**
+
+Jedes Feedback – positiv oder kritisch – hilft uns, die nächsten Schritte zu priorisieren.
 
 ---
 
-Thank you for being part of the Thunderstorm alpha! Your time and feedback are genuinely appreciated. Every report you file, every suggestion you make, and every impression you share helps us build a better platform for creators and their communities.
+## 13. Häufige Fragen (FAQ)
+
+**F: Wird mir echtes Geld abgebucht?**
+A: Nein. Stripe ist in der Alpha im Testmodus. Solange du die Testdaten aus [Abschnitt 7](#7-zahlungstests) nutzt, gibt es keine echte Zahlung.
+
+**F: Warum ist die Plattform auf Deutsch?**
+A: Thunderstorm richtet sich an den deutschsprachigen Markt. Oben im Navigationsbereich gibt es einen Sprachumschalter.
+
+**F: Ich sehe die Tabs Dashboard, Analytik oder Inventar nicht.**
+A: Diese sind nur für Creator-/Owner-Konten sichtbar. Registriere dich über `/registration/customer`, um sie zu sehen.
+
+**F: Die Kasse in meinem Shop funktioniert nicht.**
+A: Die Kasse deines Shops funktioniert erst, wenn du das **Stripe-Connect**-Zahlungs-Setup im Creator-Onboarding abgeschlossen hast. Siehe [Abschnitt 2](#2-erste-schritte).
+
+**F: Kann ich von außerhalb Deutschlands testen?**
+A: Die Plattform kannst du von überall ansehen, aber das Creator-/Verkäufer-Onboarding unterstützt aktuell **nur Deutschland** – du brauchst eine deutsche Adresse und deutsche Test-Bankdaten für den Zahlungs-Schritt.
+
+**F: Was passiert mit meinen Daten nach der Alpha?**
+A: Nach der Alpha kannst du dein Konto und deine Daten behalten oder die vollständige Löschung beantragen. Wir kontaktieren alle Tester, bevor etwas geändert wird. Siehe [Abschnitt 8](#8-deine-daten--datenschutz).
+
+**F: Kann ich die Plattform auf dem Handy nutzen?**
+A: Die Plattform ist für Desktop-Browser gemacht. Auf dem Handy kann die Darstellung in der Alpha noch unterschiedlich sein.
+
+**F: Woher weiß ich, wann es Updates gibt?**
+A: Wir aktualisieren den Abschnitt [Was ist neu](#was-ist-neu) oben auf dieser Seite und melden uns bei größeren Änderungen ggf. per E-Mail.
+
+---
+
+## 14. Kontakt
+
+Für Fragen, Probleme oder Feedback:
+
+- **GitHub Issues**: [erso44/Thunderstorm-Feedback](https://github.com/erso44/Thunderstorm-Feedback/issues) — für Fehler, Feedback und Funktionswünsche.
+- **E-Mail**: ekthunderstorminfo@gmail.com — für Sicherheitsmeldungen, Konto-Löschung, Datenschutz-Anfragen oder Fragen außerhalb von GitHub.
+- **Antwortzeit**: innerhalb von 48 Stunden.
+
+---
+
+Danke, dass du Teil der Thunderstorm-Alpha bist! Deine Zeit und dein Feedback bedeuten uns wirklich viel. Jede Meldung, jeder Vorschlag und jeder Eindruck hilft uns, eine bessere Plattform für Creator und ihre Communities zu bauen. 🚀
