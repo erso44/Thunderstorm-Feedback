@@ -56,7 +56,7 @@ Willkommen beim Alpha-Test! 🎉 Du gehörst zu den allerersten Creators, die Th
 
 ## 1. Willkommen
 
-**Thunderstorm ist die Live-Shopping-Plattform für Creator in Deutschland.** Sie bringt Live-Shopping, Community und deinen eigenen Online-Shop an einem Ort zusammen: Du gehst live, verkaufst Produkte, baust eine Community auf – und behältst dein Publikum und deine Einnahmen. Die Plattform ist von Grund auf für Europa gebaut: gehostet in Deutschland, DSGVO- und BGB-konform, mit täglichen Euro-Auszahlungen über Stripe Connect.
+**Thunderstorm ist die Live-Shopping-Plattform für Creator in Deutschland.** Sie bringt Live-Shopping, Community und deinen eigenen Online-Shop an einem Ort zusammen: Du gehst live, verkaufst Produkte, baust eine Community auf – und behältst dein Publikum und deine Einnahmen. Die Plattform ist von Grund auf für Europa gebaut: Daten werden ruhend in Deutschland gespeichert (einzelne US-Dienstleister wie Cloudflare und Google verarbeiten begrenzte Daten unter EU-Standardvertragsklauseln – siehe [Abschnitt 8](#8-deine-daten--datenschutz)), DSGVO- und BGB-konform, mit täglichen Euro-Auszahlungen über Stripe Connect.
 
 Als Creator kannst du eine Community aufbauen, einen Shop betreiben, deinen Bestand verwalten, live senden und deine Statistiken sehen – alles über ein einziges Dashboard. Mitglieder treten deiner Community bei, machen im Forum mit, stöbern in deinem Shop und schauen deine Streams.
 
@@ -361,6 +361,8 @@ Dies ist eine kurze Zusammenfassung für Alpha-Tester. Das vollständige, maßge
 **Rechtsgrundlagen.** Die Verarbeitung für deine Teilnahme am Alpha-Test stützt sich auf die Durchführung der Testvereinbarung; Aktivitäts-/Nutzungsdaten verarbeiten wir auf Grundlage unseres berechtigten Interesses am Betrieb, an der Sicherheit und an der Verbesserung der Plattform; wo das Gesetz es verlangt (z. B. bei nicht notwendigen Cookies), stützen wir uns auf deine Einwilligung.
 
 **Zahlungsabwicklung.** Karten- und Auszahlungsdaten, die du eingibst, werden von **Stripe**, unserem Zahlungsdienstleister, im Testmodus verarbeitet.
+
+**US-Dienstleister (Drittlandübermittlung).** Deine Konto- und Kaufdaten werden ruhend in der EU (Hetzner, Falkenstein/Nürnberg) gespeichert. Wenige namentlich genannte US-Anbieter verarbeiten begrenzte Daten auf Grundlage der EU-Standardvertragsklauseln: **Cloudflare** (Edge-Sicherheit und DNS – verarbeitet technische Daten wie deine IP-Adresse) und **Google** (E-Mail-Versand). KI-Funktionen nutzen, sofern aktiviert, **OpenAI**.
 
 **Aufbewahrung.** Kontodaten werden für die Lebensdauer deines Kontos und 30 Tage nach einem Löschantrag aufbewahrt. Nutzungs- und Analysedaten werden innerhalb von 90 Tagen aggregiert oder anonymisiert. Steuerlich relevante Unterlagen werden 10 Jahre aufbewahrt, wo das Gesetz es verlangt (§147 AO). Wir kontaktieren alle Tester, bevor am Ende der Alpha Daten geändert werden.
 
