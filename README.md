@@ -306,10 +306,10 @@ Bei der Creator-Registrierung wählst du einen dieser Pläne:
 | Moderatoren | 3 | 10 | 25 |
 | Aufzeichnungen (VOD) | 14 Tage | 30 Tage | 45 Tage |
 | Live-Commerce (im Stream verkaufen) | — | Ja | Ja |
-| Lagerverwaltung (WMS) | — | — | Ja |
-| Analytik | — | Basis | Voll |
-| Eigene Domain | — | — | Ja |
-| API-Zugriff | — | Lesezugriff | Voll |
+| Lagerverwaltung (WMS) | — | Lite | Full |
+| Analytik | — | Ja | Ja |
+| Eigene Domain | — | — | — |
+| API-Zugriff | — | — | — |
 
 **Für den Alpha-Test**: Alle Pläne funktionieren mit Test-Zahlungskarten – es wird **kein echtes Geld** abgebucht. Der kostenlose Starter-Plan hat keinen Zahlungsschritt; wähle Pro oder Business, wenn du die Abo-Zahlung testen möchtest. Die aktuell gültigen Plan-Details stehen immer auf der Preis-Seite der Plattform.
 
