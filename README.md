@@ -13,7 +13,7 @@ Willkommen beim Alpha-Test! 🎉 Du gehörst zu den allerersten Creators, die Th
 ## Schnellstart (2 Minuten)
 
 1. **Öffnen**: [https://ek-thunderstorm.com](https://ek-thunderstorm.com)
-2. **Als Creator registrieren**: Geh auf `https://ek-thunderstorm.com/registration/customer` und folge der Anmeldung in 4 Schritten.
+2. **Als Creator registrieren**: Geh auf `https://ek-thunderstorm.com/registration/creator` und folge der Anmeldung in 4 Schritten.
 3. **Shop einrichten**: Nach der Anmeldung führt dich ein Assistent durch die Einrichtung – Profil, Shop-Daten, Zahlungs-Setup und dein erstes Produkt.
 4. **Erkunden**: Schau dir dein **Dashboard** an, öffne deinen **Shop**, stöbere im **Forum** und wirf einen Blick in den **Live**-Bereich.
 5. **Einen Fehler gefunden?** Melde ihn über [GitHub Issues](https://github.com/erso44/Thunderstorm-Feedback/issues/new/choose) mit den vorbereiteten Vorlagen.
