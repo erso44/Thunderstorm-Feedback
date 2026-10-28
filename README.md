@@ -4,6 +4,8 @@
 
 Willkommen! 🎉 Die Alpha-Phase ist abgeschlossen – Thunderstorm ist **live**. Diese Anleitung zeigt dir, wie du als Creator startest, und dieses Repository bleibt der Ort für dein Feedback: Jeder Fehler, den du findest, und jeder Eindruck, den du teilst, fließt direkt in die Weiterentwicklung ein.
 
+> **💬 DEIN FEEDBACK GEHÖRT INS ISSUE BOARD** — Feedback, Anregungen, Wünsche und Fehlermeldungen sammeln wir im [**Issue Board**](https://github.com/erso44/Thunderstorm-Feedback/issues). Dort kannst du bestehende Einträge lesen, mit 👍 unterstützen und kommentieren – oder mit [**New Issue**](https://github.com/erso44/Thunderstorm-Feedback/issues/new/choose) etwas Neues einreichen. Bitte schreib uns Feedback nicht per Chat oder E-Mail, damit nichts verloren geht (Ausnahme: Sicherheitslücken, Konto-Löschung und Zahlungsprobleme, siehe [Abschnitt 14](#14-kontakt)).
+
 **Status**: Live · **Alpha**: Mai 2026 (abgeschlossen) · **Version**: 3.0 (deutsche Fassung)
 
 > **ZAHLUNGEN SIND ECHT** — Die Plattform läuft im Live-Betrieb. Abo-Zahlungen, Käufe und Auszahlungen über Stripe sind **echtes Geld**; Testkarten funktionieren nicht mehr (siehe [Abschnitt 7](#7-zahlungen)). Funktionen werden weiter laufend verbessert.
@@ -16,11 +18,11 @@ Willkommen! 🎉 Die Alpha-Phase ist abgeschlossen – Thunderstorm ist **live**
 2. **Als Creator registrieren**: Geh auf `https://ek-thunderstorm.com/registration/creator` und folge der Anmeldung in 4 Schritten.
 3. **Shop einrichten**: Nach der Anmeldung führt dich ein Assistent durch die Einrichtung – Profil, Shop-Daten, Zahlungs-Setup und dein erstes Produkt.
 4. **Erkunden**: Schau dir dein **Dashboard** an, öffne deinen **Shop**, stöbere im **Forum** und wirf einen Blick in den **Live**-Bereich.
-5. **Einen Fehler gefunden?** Melde ihn über [GitHub Issues](https://github.com/erso44/Thunderstorm-Feedback/issues/new/choose) mit den vorbereiteten Vorlagen.
+5. **Feedback, Idee, Wunsch oder Fehler?** Trag es im [**Issue Board**](https://github.com/erso44/Thunderstorm-Feedback/issues) ein ([New Issue](https://github.com/erso44/Thunderstorm-Feedback/issues/new/choose) mit vorbereiteten Vorlagen). Schau vorher kurz, ob es schon einen Eintrag gibt, und unterstütze ihn mit 👍.
 
 > **💡 Wichtig – bitte kurz lesen:**
 > **Einige Communities sind schon mit Beispiel-Daten gefüllt.** Wundere dich nicht, wenn du fertige Communities mit Inhalten siehst – das ist **Absicht**, damit die Plattform nicht leer wirkt.
-> **So testest du richtig:** Erstelle als **Creator** deine **eigene** Community und teste dort alles. Möchtest du auch die Sicht eines **Mitglieds** sehen? Melde dich mit einem **zweiten Konto** (andere E-Mail) an und tritt deiner eigenen Community bei. So erlebst du **beide Seiten**.
+> **So startest du richtig:** Erstelle als **Creator** deine **eigene** Community und probiere dort alles aus. Möchtest du auch die Sicht eines **Mitglieds** sehen? Melde dich mit einem **zweiten Konto** (andere E-Mail) an und tritt deiner eigenen Community bei. So erlebst du **beide Seiten**.
 
 ---
 
@@ -57,7 +59,7 @@ Willkommen! 🎉 Die Alpha-Phase ist abgeschlossen – Thunderstorm ist **live**
 
 ## 1. Willkommen
 
-**Thunderstorm ist die Live-Shopping-Plattform für Creator in Deutschland.** Sie bringt Live-Shopping, Community und deinen eigenen Online-Shop an einem Ort zusammen: Du gehst live, verkaufst Produkte, baust eine Community auf – und behältst dein Publikum und deine Einnahmen. Die Plattform ist von Grund auf für Europa gebaut: Daten werden ruhend in Deutschland gespeichert (einzelne US-Dienstleister wie Cloudflare und Google verarbeiten begrenzte Daten unter EU-Standardvertragsklauseln – siehe [Abschnitt 8](#8-deine-daten--datenschutz)), DSGVO- und BGB-konform, mit täglichen Euro-Auszahlungen über Stripe Connect.
+**Thunderstorm ist die Live-Shopping-Plattform für Creator in Deutschland.** Sie bringt Live-Shopping, Community und deinen eigenen Online-Shop an einem Ort zusammen: Du gehst live, verkaufst Produkte, baust eine Community auf – und behältst dein Publikum und deine Einnahmen. Die Plattform ist von Grund auf für Europa gebaut: Daten werden ruhend in Deutschland gespeichert (einzelne US-Dienstleister wie Cloudflare und Google verarbeiten begrenzte Daten unter EU-Standardvertragsklauseln – siehe [Abschnitt 8](#8-deine-daten--datenschutz)), DSGVO- und BGB-konform, mit regelmäßigen Euro-Auszahlungen über Stripe Connect.
 
 Als Creator kannst du eine Community aufbauen, einen Shop betreiben, deinen Bestand verwalten, live senden und deine Statistiken sehen – alles über ein einziges Dashboard. Mitglieder treten deiner Community bei, machen im Forum mit, stöbern in deinem Shop und schauen deine Streams.
 
@@ -135,7 +137,7 @@ Nach der Registrierung führt dich der Assistent durch die Einrichtung deines Sh
 
 > **💳 Zahlungs-Setup ist wichtig**: Die Kasse deines Shops funktioniert erst, wenn das **Stripe-Connect**-Zahlungs-Setup abgeschlossen ist. Das Zahlungs-Setup läuft über Stripe im **Live-Modus** – du gibst dort echte Angaben ein, siehe [Abschnitt 7](#7-zahlungen).
 
-> **🌍 Region**: Das Creator-/Verkäufer-Onboarding unterstützt aktuell **nur Deutschland**. Wenn du von außerhalb Deutschlands testest, brauchst du für den Zahlungs-Schritt eine deutsche Adresse und ein deutsches Bankkonto.
+> **🌍 Region**: Das Creator-/Verkäufer-Onboarding unterstützt aktuell **nur Deutschland**. Für den Zahlungs-Schritt brauchst du eine deutsche Adresse und ein echtes deutsches Bankkonto; Stripe prüft deine Angaben real. Creator außerhalb Deutschlands können das Onboarding aktuell nicht abschließen.
 
 ### Als Mitglied registrieren (optional)
 
@@ -144,7 +146,7 @@ Du kannst auch ein **Mitglieds-Konto** anlegen, um die Plattform aus Sicht eines
 1. Geh auf `https://ek-thunderstorm.com/registration/member`.
 2. Wähle eine Community aus (am besten deine eigene) und gib deine E-Mail-Adresse ein.
 
-> **So testest du beide Seiten:** Lege **ein Creator-Konto** und **ein Mitglieds-Konto** mit **unterschiedlichen E-Mail-Adressen** an. Tritt mit dem zweiten Konto deiner **eigenen** Community bei – so siehst du sowohl die Creator- als auch die Mitglieder-Sicht. (Die schon vorhandenen Beispiel-Communities sind nur zur Veranschaulichung da.)
+> **So siehst du beide Seiten:** Lege **ein Creator-Konto** und **ein Mitglieds-Konto** mit **unterschiedlichen E-Mail-Adressen** an. Tritt mit dem zweiten Konto deiner **eigenen** Community bei – so siehst du sowohl die Creator- als auch die Mitglieder-Sicht. (Die schon vorhandenen Beispiel-Communities sind nur zur Veranschaulichung da.)
 
 ### Passwort-Anforderungen
 
@@ -262,7 +264,7 @@ Aktualisiere deine Konto-Einstellungen.
 Die Abo-Zahlung läuft während der Creator-Registrierung (echtes Geld, siehe Abschnitt 7).
 
 **Szenario: Abo-Zahlung abschließen**
-1. Der kostenlose **Starter**-Plan hat keinen Zahlungsschritt. Einen kostenpflichtigen Plan (Pro oder Business) testest du nur, wenn du ihn wirklich buchen willst – die Zahlung ist **echt** (siehe [Abschnitt 7](#7-zahlungen)).
+1. Der kostenlose **Starter**-Plan hat keinen Zahlungsschritt. Einen kostenpflichtigen Plan (Pro oder Business) buchst du nur, wenn du ihn wirklich nutzen willst – die Zahlung ist **echt** (siehe [Abschnitt 7](#7-zahlungen)).
 2. Wählst du einen kostenpflichtigen Plan, gibst du deine Zahlungsdaten im sicheren Stripe-Formular ein.
 3. Schließe die Zahlung ab.
 4. **Erwartet**: Die Zahlung gelingt und du gelangst weiter ins Creator-Onboarding.
@@ -373,7 +375,7 @@ Etwas kaputt, verwirrend oder unerwartet? Bitte melde es!
 
 ### Wo melden
 
-Geh auf [**New Issue**](https://github.com/erso44/Thunderstorm-Feedback/issues/new/choose) und wähle die passende Vorlage:
+Alles läuft über das [**Issue Board**](https://github.com/erso44/Thunderstorm-Feedback/issues). Prüfe zuerst, ob es deinen Punkt schon gibt – dann gib ihm ein 👍 oder ergänze einen Kommentar. Sonst geh auf [**New Issue**](https://github.com/erso44/Thunderstorm-Feedback/issues/new/choose) und wähle die passende Vorlage:
 
 | Vorlage | Wann nutzen |
 |---------|-------------|
@@ -467,7 +469,7 @@ A: Diese sind nur für Creator-/Owner-Konten sichtbar. Registriere dich über `/
 A: Die Kasse deines Shops funktioniert erst, wenn du das **Stripe-Connect**-Zahlungs-Setup im Creator-Onboarding abgeschlossen hast. Siehe [Abschnitt 2](#2-erste-schritte).
 
 **F: Kann ich von außerhalb Deutschlands testen?**
-A: Die Plattform kannst du von überall ansehen, aber das Creator-/Verkäufer-Onboarding unterstützt aktuell **nur Deutschland** – du brauchst eine deutsche Adresse und deutsche Test-Bankdaten für den Zahlungs-Schritt.
+A: Die Plattform kannst du von überall ansehen, aber das Creator-/Verkäufer-Onboarding unterstützt aktuell **nur Deutschland** – du brauchst eine deutsche Adresse und ein echtes deutsches Bankkonto für den Zahlungs-Schritt (Stripe prüft die Angaben real).
 
 **F: Kann ich meine Daten löschen lassen?**
 A: Ja, du kannst die vollständige Löschung deines Kontos beantragen. Siehe [Abschnitt 8](#8-deine-daten--datenschutz).
@@ -484,7 +486,7 @@ A: Wir aktualisieren den Abschnitt [Was ist neu](#was-ist-neu) oben auf dieser S
 
 Für Fragen, Probleme oder Feedback:
 
-- **GitHub Issues**: [erso44/Thunderstorm-Feedback](https://github.com/erso44/Thunderstorm-Feedback/issues) — für Fehler, Feedback und Funktionswünsche.
+- **Issue Board** (bevorzugt): [erso44/Thunderstorm-Feedback](https://github.com/erso44/Thunderstorm-Feedback/issues) — für Fehler, Feedback, Anregungen und Funktionswünsche.
 - **E-Mail**: ekthunderstorminfo@gmail.com — für Sicherheitsmeldungen, Konto-Löschung, Datenschutz-Anfragen oder Fragen außerhalb von GitHub.
 - **Antwortzeit**: innerhalb von 48 Stunden.
 
