@@ -59,7 +59,7 @@ Willkommen! 🎉 Die Alpha-Phase ist abgeschlossen – Thunderstorm ist **live**
 
 ## 1. Willkommen
 
-**Thunderstorm ist die Live-Shopping-Plattform für Creator in Deutschland.** Sie bringt Live-Shopping, Community und deinen eigenen Online-Shop an einem Ort zusammen: Du gehst live, verkaufst Produkte, baust eine Community auf – und behältst dein Publikum und deine Einnahmen. Die Plattform ist von Grund auf für Europa gebaut: Daten werden ruhend in Deutschland gespeichert (einzelne US-Dienstleister wie Cloudflare und Google verarbeiten begrenzte Daten unter EU-Standardvertragsklauseln – siehe [Abschnitt 8](#8-deine-daten--datenschutz)), DSGVO- und BGB-konform, mit regelmäßigen Euro-Auszahlungen über Stripe Connect.
+**Thunderstorm ist die Live-Shopping-Plattform für Creator in Deutschland.** Sie bringt Live-Shopping, Community und deinen eigenen Online-Shop an einem Ort zusammen: Du gehst live, verkaufst Produkte, baust eine Community auf – und behältst dein Publikum und deine Einnahmen. Die Plattform ist von Grund auf für Europa gebaut: Daten werden ruhend in Deutschland gespeichert (Details zu Dienstleistern und Übermittlungen siehe [Abschnitt 8](#8-deine-daten--datenschutz)), DSGVO- und BGB-konform, mit regelmäßigen Euro-Auszahlungen über Stripe Connect.
 
 Als Creator kannst du eine Community aufbauen, einen Shop betreiben, deinen Bestand verwalten, live senden und deine Statistiken sehen – alles über ein einziges Dashboard. Mitglieder treten deiner Community bei, machen im Forum mit, stöbern in deinem Shop und schauen deine Streams.
 
@@ -306,7 +306,7 @@ Bei der Creator-Registrierung wählst du einen dieser Pläne:
 | Lagerverwaltung (WMS) | — | Lite | Full |
 | Analytik | — | Ja | Ja |
 
-Der kostenlose Starter-Plan hat keinen Zahlungsschritt; Pro und Business sind kostenpflichtig und werden **real abgebucht**. Die aktuell gültigen Plan-Details stehen immer auf der Preis-Seite der Plattform.
+Der kostenlose Starter-Plan hat keinen Zahlungsschritt; Pro und Business sind kostenpflichtig und werden **real abgebucht**. Die aktuell gültigen Plan-Details stehen immer auf der Preis-Seite der Plattform. Dort und im Bestellschritt stehen auch die Angaben zur Umsatzsteuer sowie zu Widerruf und Kündigung; maßgeblich sind die AGB und Widerrufsinformationen der Plattform.
 
 ---
 
@@ -332,24 +332,18 @@ Alle Preise auf der Plattform werden in **Euro (EUR)** angezeigt. Die Provision 
 
 ## 8. Deine Daten & Datenschutz
 
-Dies ist eine kurze Zusammenfassung. Das vollständige, maßgebliche Dokument ist die **Datenschutzerklärung** unter [https://ek-thunderstorm.com/privacy-terms](https://ek-thunderstorm.com/privacy-terms).
-
-**Verantwortlicher.** ThunderLabs UG, Baumensteinstr. 2, 89134 Blaustein, Deutschland – Verantwortlicher im Sinne von Art. 4 Nr. 7 DSGVO. Vollständige Angaben findest du im Impressum unter [https://ek-thunderstorm.com/legal-notice](https://ek-thunderstorm.com/legal-notice).
+Dies ist eine kurze Orientierung. Das vollständige, maßgebliche Dokument ist die **Datenschutzerklärung** unter [https://ek-thunderstorm.com/privacy-terms](https://ek-thunderstorm.com/privacy-terms). Bei Abweichungen gilt immer die Datenschutzerklärung. Wer für die Verarbeitung verantwortlich ist, steht im Impressum unter [https://ek-thunderstorm.com/legal-notice](https://ek-thunderstorm.com/legal-notice).
 
 **Was wir verarbeiten.**
 - **Kontodaten** – deine E-Mail-Adresse, dein Benutzername und dein Passwort. Dein Passwort wird nie im Klartext gespeichert, sondern nur als gesalzener Hash.
-- **Aktivitätsdaten** – wie du die Plattform nutzt, zum Betrieb und zur Verbesserung der Plattform.
+- **Aktivitäts- und Zahlungsdaten** – wie du die Plattform nutzt sowie Abo-, Bestell- und Auszahlungsdaten.
 - **Inhalte** – Communities, Beiträge, Kommentare oder Produkte, die du erstellst.
 
-**Rechtsgrundlagen.** Die maßgeblichen Rechtsgrundlagen je Verarbeitung nennt die Datenschutzerklärung. Aktivitäts-/Nutzungsdaten verarbeiten wir auf Grundlage unseres berechtigten Interesses am Betrieb, an der Sicherheit und an der Verbesserung der Plattform; wo das Gesetz es verlangt (z. B. bei nicht notwendigen Cookies), stützen wir uns auf deine Einwilligung.
+**Rechtsgrundlagen, Dienstleister, Übermittlungen in Drittländer und Aufbewahrungsfristen** (z. B. für Rechnungen und Buchungsbelege) stehen verbindlich in der Datenschutzerklärung. Wir wiederholen sie hier bewusst nicht, damit es keine abweichenden Fassungen gibt.
 
-**Zahlungsabwicklung.** Karten- und Auszahlungsdaten, die du eingibst, werden von **Stripe**, unserem Zahlungsdienstleister, im Live-Modus verarbeitet.
+**Zahlungsabwicklung.** Karten- und Auszahlungsdaten, die du eingibst, werden von **Stripe**, unserem Zahlungsdienstleister, im Live-Modus verarbeitet (siehe [Abschnitt 7](#7-zahlungen)).
 
-**US-Dienstleister (Drittlandübermittlung).** Deine Konto- und Kaufdaten werden ruhend in der EU (Hetzner, Falkenstein/Nürnberg) gespeichert. Wenige namentlich genannte US-Anbieter verarbeiten begrenzte Daten auf Grundlage der EU-Standardvertragsklauseln: **Cloudflare** (Edge-Sicherheit und DNS – verarbeitet technische Daten wie deine IP-Adresse) und **Google** (E-Mail-Versand). KI-Funktionen nutzen, sofern aktiviert, **OpenAI**.
-
-**Aufbewahrung.** Kontodaten werden für die Lebensdauer deines Kontos und 30 Tage nach einem Löschantrag aufbewahrt. Nutzungs- und Analysedaten werden innerhalb von 90 Tagen aggregiert oder anonymisiert. Steuerlich relevante Unterlagen werden 10 Jahre aufbewahrt, wo das Gesetz es verlangt (§147 AO).
-
-**Deine Rechte.** Nach der DSGVO hast du das Recht auf Auskunft, Berichtigung, Löschung, Einschränkung, Datenübertragbarkeit und Widerspruch gegen die Verarbeitung. Außerdem hast du das Recht, dich bei der zuständigen Aufsichtsbehörde zu beschweren – für die ThunderLabs UG ist das die *Landesbeauftragte für den Datenschutz und die Informationsfreiheit Baden-Württemberg* (LfDI Baden-Württemberg). Um eines dieser Rechte auszuüben oder die Löschung deines Kontos zu beantragen, schreib an **ekthunderstorminfo@gmail.com**.
+**Deine Rechte.** Nach der DSGVO hast du das Recht auf Auskunft, Berichtigung, Löschung, Einschränkung, Datenübertragbarkeit und Widerspruch gegen die Verarbeitung sowie das Recht auf Beschwerde bei einer Datenschutz-Aufsichtsbehörde. Die zuständige Stelle und die Wege zur Ausübung deiner Rechte (u. a. Konto-Löschung in der Plattform) nennt die Datenschutzerklärung. Du kannst dich auch per E-Mail an **ekthunderstorminfo@gmail.com** wenden.
 
 Maßgeblich ist immer die vollständige Datenschutzerklärung.
 
