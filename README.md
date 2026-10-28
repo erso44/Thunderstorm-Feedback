@@ -1,12 +1,12 @@
-# Thunderstorm — Alpha-Testanleitung für Creator
+# Thunderstorm — Creator-Anleitung & Feedback
 
 **Thunderstorm ist die Live-Shopping-Plattform für Creator.** Geh live, zeig dein Produkt und verkauf in Echtzeit – deine Community, dein Shop und deine Live-Streams an einem Ort.
 
-Willkommen beim Alpha-Test! 🎉 Du gehörst zu den allerersten Creators, die Thunderstorm ausprobieren dürfen. Dein Feedback fließt direkt in das Produkt ein, bevor es offiziell startet. Danke, dass du dir die Zeit nimmst – jeder Fehler, den du findest, und jeder Eindruck, den du teilst, hilft uns wirklich weiter.
+Willkommen! 🎉 Die Alpha-Phase ist abgeschlossen – Thunderstorm ist **live**. Diese Anleitung zeigt dir, wie du als Creator startest, und dieses Repository bleibt der Ort für dein Feedback: Jeder Fehler, den du findest, und jeder Eindruck, den du teilst, fließt direkt in die Weiterentwicklung ein.
 
-**Status**: Alpha · **Gestartet**: Mai 2026 · **Version**: 2.1 (deutsche Fassung)
+**Status**: Live · **Alpha**: Mai 2026 (abgeschlossen) · **Version**: 3.0 (deutsche Fassung)
 
-> **ALPHA-HINWEIS** — Thunderstorm wird gerade aktiv entwickelt. Funktionen können sich ändern, Daten können zurückgesetzt werden, und manches ist noch nicht fertig. Bitte nutze die Plattform in der Testphase nicht für echte Geschäfte und verwende nur Test-Zahlungsdaten (siehe [Abschnitt 7](#7-zahlungstests)).
+> **ZAHLUNGEN SIND ECHT** — Die Plattform läuft im Live-Betrieb. Abo-Zahlungen, Käufe und Auszahlungen über Stripe sind **echtes Geld**; Testkarten funktionieren nicht mehr (siehe [Abschnitt 7](#7-zahlungen)). Funktionen werden weiter laufend verbessert.
 
 ---
 
@@ -28,6 +28,7 @@ Willkommen beim Alpha-Test! 🎉 Du gehörst zu den allerersten Creators, die Th
 
 | Datum | Update |
 |-------|--------|
+| Oktober 2026 | Anleitung v3.0 — **Alpha beendet, Thunderstorm ist live.** Alpha-Texte entfernt, **Zahlungen laufen jetzt im Live-Modus (echtes Geld, keine Testkarten mehr)**, Plan-Tabelle auf den aktuellen Stand gebracht (Limits, Provisionen; „Eigene Domain“ und „API-Zugriff“ sind entfallen), Registrierungs-Links korrigiert. |
 | Juni 2026 | Anleitung v2.1 — komplett auf Deutsch, in einfacher Sprache und mit Fokus auf Creator. |
 | Mai 2026 | Anleitung v2.0 — neu ausgerichtet auf Creator. Alpha startet für die ersten eingeladenen Creator. |
 
@@ -40,12 +41,12 @@ Willkommen beim Alpha-Test! 🎉 Du gehörst zu den allerersten Creators, die Th
 1. [Willkommen](#1-willkommen)
 2. [Erste Schritte](#2-erste-schritte)
 3. [Bereiche der Plattform](#3-bereiche-der-plattform)
-4. [Funktionen & Test-Szenarien](#4-funktionen--test-szenarien)
+4. [Funktionen & Szenarien](#4-funktionen--szenarien)
 5. [Nutzerrollen](#5-nutzerrollen)
 6. [Abo-Pläne](#6-abo-pläne)
-7. [Zahlungstests](#7-zahlungstests)
+7. [Zahlungen](#7-zahlungen)
 8. [Deine Daten & Datenschutz](#8-deine-daten--datenschutz)
-9. [Verhaltenskodex für Alpha-Tester](#9-verhaltenskodex-für-alpha-tester)
+9. [Verhaltenskodex](#9-verhaltenskodex)
 10. [Probleme melden](#10-probleme-melden)
 11. [Fehlerbehebung](#11-fehlerbehebung)
 12. [Erfahrungen teilen](#12-erfahrungen-teilen)
@@ -60,13 +61,11 @@ Willkommen beim Alpha-Test! 🎉 Du gehörst zu den allerersten Creators, die Th
 
 Als Creator kannst du eine Community aufbauen, einen Shop betreiben, deinen Bestand verwalten, live senden und deine Statistiken sehen – alles über ein einziges Dashboard. Mitglieder treten deiner Community bei, machen im Forum mit, stöbern in deinem Shop und schauen deine Streams.
 
-**Was bedeutet Alpha-Test?** Du gehörst zu den ersten Creators von außerhalb, die Thunderstorm ausprobieren. Die Plattform ist schon so weit, dass echte Creator-Abläufe komplett funktionieren – Registrierung, Community aufbauen, Produkte einstellen, live gehen. Aber es ist Vor-Start-Software. Rechne mit kleinen Ecken und Kanten – und damit, dass wir auf Basis deiner Meldungen schnell nachbessern.
+**Wo stehen wir?** Die Alpha-Phase (ab Mai 2026) ist abgeschlossen, Thunderstorm ist live. Die Creator-Abläufe funktionieren komplett – Registrierung, Community aufbauen, Produkte einstellen, live gehen. Einzelne Funktionen werden weiter ausgebaut; sollte dir etwas auffallen, melde es bitte, wir bessern schnell nach.
 
 ### Was wir dich bitten
 
-- **Erste Runde**: Nimm dir 30–60 Minuten Zeit und probiere die Plattform aus, am besten anhand der [Test-Szenarien](#4-funktionen--test-szenarien).
-- **Komm wieder**: Nachdem wir auf Basis deines Feedbacks Updates ausgeliefert haben, laden wir dich vielleicht zum erneuten Testen ein. So prüfen wir, ob die Lösungen wirklich funktionieren.
-- **Melde Probleme**: Nutze die [Vorlagen](#10-probleme-melden) – je mehr Details, desto schneller können wir helfen.
+- **Probiere aus und melde**: Wenn dir etwas kaputt, verwirrend oder unvollständig vorkommt, nutze die [Vorlagen](#10-probleme-melden) – je mehr Details, desto schneller können wir helfen.
 - **Bleib erreichbar**: Wenn wir bei etwas nachfragen, hilft uns eine kurze Antwort sehr.
 - **Sei ehrlich**: Kritisches Feedback ist das wertvollste.
 
@@ -77,18 +76,13 @@ Als Creator kannst du eine Community aufbauen, einen Shop betreiben, deinen Best
 - Fühlt sich das Einrichten eines Shops und das Einstellen eines Produkts intuitiv an?
 - Gibt es verwirrende, kaputte oder „tote" Bildschirme?
 
-### Zeitplan der Alpha
+### Meilensteine
 
-| Phase | Zeitraum | Was passiert |
-|-------|----------|--------------|
-| **Alpha** (aktuell) | Mai 2026 | Erste eingeladene Creator erkunden die Plattform, melden Fehler und geben Feedback. |
-| **Fehlerbehebung & Iteration** | Laufend | Wir beheben gemeldete Probleme und liefern Updates aus. |
-| **Beta** | Wird noch bekannt gegeben | Breiterer Test mit mehr Nutzern und mehr Funktionen. |
-| **Öffentlicher Start** | Wird noch bekannt gegeben | Die Plattform öffnet sich für alle. |
-
-### Anerkennung für Tester
-
-Creator, die aktiv mitmachen und gutes Feedback geben, werden in unseren Start-Credits genannt und bekommen neue Funktionen früher als die Öffentlichkeit.
+| Phase | Zeitraum | Stand |
+|-------|----------|-------|
+| **Alpha** | Mai 2026 | Abgeschlossen – erste eingeladene Creator haben die Plattform getestet. |
+| **Live** | Aktuell | Die Plattform ist im Live-Betrieb, Zahlungen sind echt. |
+| **Weiterentwicklung** | Laufend | Wir beheben gemeldete Probleme und liefern Updates aus. |
 
 ---
 
@@ -102,12 +96,12 @@ Creator, die aktiv mitmachen und gutes Feedback geben, werden in unseren Start-C
 
 | Browser | Status | Hinweise |
 |---------|--------|----------|
-| Google Chrome (aktuell) | Empfohlen | Haupt-Testbrowser |
+| Google Chrome (aktuell) | Empfohlen | Haupt-Browser |
 | Mozilla Firefox (aktuell) | Unterstützt | Voll funktionsfähig |
 | Microsoft Edge (aktuell) | Sollte funktionieren | Nicht aktiv getestet |
 | Safari (aktuell) | Sollte funktionieren | Nicht aktiv getestet |
 
-**Gerät**: Die Plattform ist für Desktop-Browser gemacht. Auf dem Handy kann die Darstellung in der Alpha noch unterschiedlich sein.
+**Gerät**: Die Plattform ist für Desktop-Browser gemacht. Auf dem Handy kann die Darstellung noch unterschiedlich sein.
 
 **Sprache**: Die Oberfläche ist auf **Deutsch**. Oben im Navigationsbereich gibt es einen Sprachumschalter.
 
@@ -115,7 +109,7 @@ Creator, die aktiv mitmachen und gutes Feedback geben, werden in unseren Start-C
 
 Mit einem Creator-Konto kannst du eine Community verwalten, einen Shop betreiben, Produkte verkaufen, live senden, deinen Bestand verwalten und Statistiken sehen.
 
-1. Geh auf `https://ek-thunderstorm.com/registration/customer`.
+1. Geh auf `https://ek-thunderstorm.com/registration/creator`.
 2. Durchlaufe die Anmeldung in 4 Schritten:
    - **Los geht's** — gib deine E-Mail-Adresse ein, um zu starten.
    - **Community** — wähle Name, Art und Sichtbarkeit deiner Community.
@@ -137,17 +131,17 @@ Nach der Registrierung führt dich der Assistent durch die Einrichtung deines Sh
 8. **Erstes Produkt anlegen**
 9. **Shop veröffentlichen**
 
-> **💡 Tipp für Tester**: Wähle beim **Verkäufer-Status** „**Privatverkäufer**", wenn du nur testest. Die Schritte nur für Gewerbliche (Verpackungsregistrierung, Bevollmächtigter) werden dann automatisch übersprungen – sie brauchen echte Registrierungsnummern, die du für ein Testkonto nicht hast.
+> **💡 Hinweis zum Verkäufer-Status**: Gib bei **Verkäufer-Status** wahrheitsgemäß an, ob du privat oder gewerblich verkaufst. Die Schritte nur für Gewerbliche (Verpackungsregistrierung, Bevollmächtigter) brauchen echte Registrierungsnummern und entfallen bei Privatverkäufern.
 
-> **💳 Zahlungs-Setup ist wichtig**: Die Kasse deines Shops funktioniert erst, wenn das **Stripe-Connect**-Zahlungs-Setup abgeschlossen ist. Nutze dafür Testdaten – siehe [Abschnitt 7](#7-zahlungstests).
+> **💳 Zahlungs-Setup ist wichtig**: Die Kasse deines Shops funktioniert erst, wenn das **Stripe-Connect**-Zahlungs-Setup abgeschlossen ist. Das Zahlungs-Setup läuft über Stripe im **Live-Modus** – du gibst dort echte Angaben ein, siehe [Abschnitt 7](#7-zahlungen).
 
-> **🌍 Region**: Das Creator-/Verkäufer-Onboarding unterstützt aktuell **nur Deutschland**. Wenn du von außerhalb Deutschlands testest, brauchst du für den Zahlungs-Schritt eine deutsche Adresse und deutsche Test-Bankdaten.
+> **🌍 Region**: Das Creator-/Verkäufer-Onboarding unterstützt aktuell **nur Deutschland**. Wenn du von außerhalb Deutschlands testest, brauchst du für den Zahlungs-Schritt eine deutsche Adresse und ein deutsches Bankkonto.
 
 ### Als Mitglied registrieren (optional)
 
 Du kannst auch ein **Mitglieds-Konto** anlegen, um die Plattform aus Sicht eines Käufers zu testen – Communities ansehen, im Forum mitmachen, einkaufen und Streams schauen. Ein Mitglieds-Konto entsteht, indem du einer **Community beitrittst**:
 
-1. Geh auf `https://ek-thunderstorm.com/registration/user`.
+1. Geh auf `https://ek-thunderstorm.com/registration/member`.
 2. Wähle eine Community aus (am besten deine eigene) und gib deine E-Mail-Adresse ein.
 
 > **So testest du beide Seiten:** Lege **ein Creator-Konto** und **ein Mitglieds-Konto** mit **unterschiedlichen E-Mail-Adressen** an. Tritt mit dem zweiten Konto deiner **eigenen** Community bei – so siehst du sowohl die Creator- als auch die Mitglieder-Sicht. (Die schon vorhandenen Beispiel-Communities sind nur zur Veranschaulichung da.)
@@ -193,15 +187,15 @@ Die wichtigsten Bereiche im Überblick:
 
 ---
 
-## 4. Funktionen & Test-Szenarien
+## 4. Funktionen & Szenarien
 
-Zu jeder Funktion gibt es ein kleines Test-Szenario. Folge den Schritten und vergleiche mit dem erwarteten Ergebnis. Weicht etwas ab, melde es bitte als Problem.
+Zu jeder Funktion gibt es ein kleines Szenario. Folge den Schritten und vergleiche mit dem erwarteten Ergebnis. Weicht etwas ab, melde es bitte als Problem.
 
 ### 4.1 Deine Community
 
 Deine Community ist dein Zuhause – sie entsteht bei der Registrierung.
 
-**Test-Szenario: Community prüfen**
+**Szenario: Community prüfen**
 1. Öffne dein **Dashboard**.
 2. Prüfe, ob Name und Angaben deiner Community stimmen.
 3. Öffne **Entdecken** und finde deine Community in der Creator-Liste.
@@ -211,7 +205,7 @@ Deine Community ist dein Zuhause – sie entsteht bei der Registrierung.
 
 Richte deinen Shop ein und sieh ihn dir an.
 
-**Test-Szenario: Produkt anlegen und ansehen**
+**Szenario: Produkt anlegen und ansehen**
 1. Beim Onboarding legst du ein erstes Produkt an – oder öffne deinen **Shop** und erstelle ein weiteres.
 2. Fülle Name, Beschreibung, Preis (in Euro) und ein Bild aus.
 3. Speichere das Produkt und öffne deinen **Shop** so, wie ihn ein Besucher sieht.
@@ -221,7 +215,7 @@ Richte deinen Shop ein und sieh ihn dir an.
 
 Behalte die Lagerbestände deiner Produkte im Blick.
 
-**Test-Szenario: Bestand ansehen**
+**Szenario: Bestand ansehen**
 1. Öffne den Tab **Inventar**.
 2. **Erwartet**: Die Bestandsübersicht zeigt deine Produkte mit Mengen und eventuellen Warnungen.
 
@@ -229,7 +223,7 @@ Behalte die Lagerbestände deiner Produkte im Blick.
 
 Sieh, wie sich deine Community und dein Shop entwickeln.
 
-**Test-Szenario: Statistiken ansehen**
+**Szenario: Statistiken ansehen**
 1. Öffne den Tab **Analytik**.
 2. **Erwartet**: Es laden Kennzahlen-Karten zu Community und Shop.
 3. Probiere die Zeitfilter und den Knopf **Exportieren** aus.
@@ -238,7 +232,7 @@ Sieh, wie sich deine Community und dein Shop entwickeln.
 
 Schau dir den Live-Bereich an.
 
-**Test-Szenario: Live-Bereich durchstöbern**
+**Szenario: Live-Bereich durchstöbern**
 1. Öffne den Tab **Live**.
 2. **Erwartet**: Die Seite lädt mit Suche, Sortierung und Status-Filtern. Wenn gerade niemand sendet, ist die Liste leer – das ist normal.
 
@@ -246,7 +240,7 @@ Schau dir den Live-Bereich an.
 
 Starte und beteilige dich an Diskussionen.
 
-**Test-Szenario: Forenbeitrag erstellen**
+**Szenario: Forenbeitrag erstellen**
 1. Öffne den Tab **Forum** in deiner Community.
 2. Wähle eine Kategorie und klicke auf **Neuer Beitrag**.
 3. Gib Titel und Text ein. Probiere die Editor-Werkzeuge (Fett, Kursiv, Listen).
@@ -257,7 +251,7 @@ Starte und beteilige dich an Diskussionen.
 
 Aktualisiere deine Konto-Einstellungen.
 
-**Test-Szenario: Profil aktualisieren**
+**Szenario: Profil aktualisieren**
 1. Öffne **Einstellungen** über dein Profilmenü.
 2. Ändere deine Profilangaben (z. B. Beschreibung, Anzeigename).
 3. Klicke auf **Änderungen speichern**.
@@ -265,11 +259,11 @@ Aktualisiere deine Konto-Einstellungen.
 
 ### 4.8 Abo-Zahlung
 
-Teste die Abo-Zahlung während der Creator-Registrierung.
+Die Abo-Zahlung läuft während der Creator-Registrierung (echtes Geld, siehe Abschnitt 7).
 
-**Test-Szenario: Abo-Zahlung abschließen**
-1. Wähle im Schritt **Plan** der Registrierung einen **kostenpflichtigen Plan** (Pro oder Business) – der kostenlose Starter-Plan hat keinen Zahlungsschritt.
-2. Gib die Testkarten-Nummer `4242 4242 4242 4242` ein (siehe [Abschnitt 7](#7-zahlungstests)).
+**Szenario: Abo-Zahlung abschließen**
+1. Der kostenlose **Starter**-Plan hat keinen Zahlungsschritt. Einen kostenpflichtigen Plan (Pro oder Business) testest du nur, wenn du ihn wirklich buchen willst – die Zahlung ist **echt** (siehe [Abschnitt 7](#7-zahlungen)).
+2. Wählst du einen kostenpflichtigen Plan, gibst du deine Zahlungsdaten im sicheren Stripe-Formular ein.
 3. Schließe die Zahlung ab.
 4. **Erwartet**: Die Zahlung gelingt und du gelangst weiter ins Creator-Onboarding.
 
@@ -284,7 +278,7 @@ Teste die Abo-Zahlung während der Creator-Registrierung.
 | **Moderator** | Inhalte moderieren | Moderations-Werkzeuge im Forum, grundlegender Zugriff |
 | **User** | Normales Mitglied | Forum, Shop, Live, Profil, Einstellungen |
 
-**Für den Alpha-Test** empfehlen wir, dich als **Owner** zu registrieren (über `/registration/customer`), um das volle Creator-Erlebnis zu testen. Zusätzlich kannst du dich als **User** registrieren (über `/registration/user`), um die Mitglieder-Sicht zu sehen.
+Als Creator registrierst du dich über `/registration/creator` und wirst **Owner** deiner Community. Als Mitglied trittst du über `/registration/member` einer Community bei und bist **User**.
 
 ---
 
@@ -296,92 +290,79 @@ Bei der Creator-Registrierung wählst du einen dieser Pläne:
 |----------|---------|-----|----------|
 | **Preis pro Monat** | Kostenlos | 29,99 € | 59,99 € |
 | **Preis pro Jahr** | Kostenlos | 287,99 € | 575,99 € |
-| Community-Mitglieder | 500 | 2.000 | 15.000 |
-| Produkt-Einträge | 50 | 250 | 3.000 |
-| Speicher | 2 GB | 15 GB | 20 GB |
-| Live-Streaming | 720p · 15 Std/Monat | 1080p · 80 Std/Monat | 1080p · 150 Std/Monat |
-| Gleichzeitige Streams | 1 | 2 | 3 |
-| Zuschauer pro Stream | 50 | 200 | 500 |
+| **Provision pro Verkauf** | 7,5 % | 5 % | 3,5 % |
+| Community-Mitglieder | 500 | 2.000 | 7.500 |
+| Produkt-Einträge | 50 | 250 | 1.500 |
+| Speicher | 1 GB | 5 GB | 10 GB |
+| Live-Streaming | — | 80 Std/Monat | 150 Std/Monat |
+| Gleichzeitige Streams | — | 1 | 2 |
+| Zuschauer pro Stream | — | 100 | 150 |
 | Forenkategorien | 10 | 25 | 100 |
 | Moderatoren | 3 | 10 | 25 |
-| Aufzeichnungen (VOD) | 14 Tage | 30 Tage | 45 Tage |
+| Aufzeichnungen (VOD) | — | 14 Tage | 30 Tage |
 | Live-Commerce (im Stream verkaufen) | — | Ja | Ja |
 | Lagerverwaltung (WMS) | — | Lite | Full |
 | Analytik | — | Ja | Ja |
-| Eigene Domain | — | — | — |
-| API-Zugriff | — | — | — |
 
-**Für den Alpha-Test**: Alle Pläne funktionieren mit Test-Zahlungskarten – es wird **kein echtes Geld** abgebucht. Der kostenlose Starter-Plan hat keinen Zahlungsschritt; wähle Pro oder Business, wenn du die Abo-Zahlung testen möchtest. Die aktuell gültigen Plan-Details stehen immer auf der Preis-Seite der Plattform.
+Der kostenlose Starter-Plan hat keinen Zahlungsschritt; Pro und Business sind kostenpflichtig und werden **real abgebucht**. Die aktuell gültigen Plan-Details stehen immer auf der Preis-Seite der Plattform.
 
 ---
 
-## 7. Zahlungstests
+## 7. Zahlungen
 
-Thunderstorm nutzt Stripe im **Sandbox- (Test-) Modus** für die Alpha. Es wird **kein echtes Geld** abgebucht.
+Thunderstorm läuft im **Live-Betrieb**, Stripe arbeitet im **Live-Modus**. Abo-Zahlungen, Käufe und Auszahlungen sind **echtes Geld**.
 
-> ⚠️ **Gib niemals echte Zahlungsdaten ein.** Verwende nirgends eine echte Kredit-/EC-Karte, eine echte IBAN oder echte Bankdaten – weder an der Abo-Kasse noch beim Stripe-Connect-Zahlungs-Setup. Nutze nur die Testdaten unten.
+> ⚠️ **Testkarten funktionieren nicht mehr.** Stripe-Testdaten (z. B. `4242 …`) werden im Live-Modus abgelehnt. Umgekehrt wird eine echte Karte, die du eingibst, **wirklich belastet**. Buche einen kostenpflichtigen Plan (Pro/Business) nur, wenn du ihn tatsächlich nutzen willst; der Starter-Plan ist kostenlos und hat keinen Zahlungsschritt.
 
-### Test-Karten fürs Abo
+### Karten- und Bankdaten
 
-| Kartennummer | Ergebnis |
-|--------------|----------|
-| `4242 4242 4242 4242` | Zahlung gelingt |
-| `4000 0000 0000 0002` | Zahlung wird abgelehnt |
+Karten- und Bankdaten gibst du **ausschließlich in den sicheren Stripe-Formularen** ein – niemals in Beschreibungen, Foren, Issues oder per E-Mail an uns. Wir sehen deine vollständige Kartennummer nie. Poste auch in GitHub-Issues keine Zahlungsdaten, Screenshots davon oder Zahlungs-IDs mit persönlichen Daten.
 
-Für alle Testkarten:
-- **Ablaufdatum**: ein beliebiges Datum in der Zukunft (z. B. `12/30`)
-- **CVC**: beliebige 3 Ziffern (z. B. `123`)
-- **PLZ**: beliebige 5 Ziffern (z. B. `12345`)
+### Stripe-Connect-Einrichtung (Auszahlungskonto)
 
-### Stripe-Connect-Einrichtung (Zahlungs-Setup)
+Beim Creator-Onboarding öffnet der Schritt **Zahlungs-Setup** das sichere Formular von Stripe, damit du ein Auszahlungskonto verbindest. Stripe prüft dabei deine **echten** Angaben (Identität, Adresse, IBAN). Das Creator-/Verkäufer-Onboarding unterstützt aktuell **nur Deutschland**.
 
-Beim Creator-Onboarding öffnet der Schritt **Zahlungs-Setup** das sichere Formular von Stripe, damit du ein Auszahlungskonto verbindest. Im Testmodus erwartet Stripe **Testdaten** – niemals echte persönliche oder Bankdaten. Typische Stripe-Testwerte:
+### Preise und Provision
 
-- **Telefon**: `000 000 0000`
-- **Geburtsdatum**: ein Datum, das dich über 18 macht (z. B. `01/01/1990`)
-- **Test-IBAN (Deutschland)**: `DE89 3704 0044 0532 0130 00`
-
-> Falls ein Feld diese Werte ablehnt, schau in die aktuelle Stripe-Testdokumentation – Stripe ändert die Testdaten gelegentlich. Denk daran: Das Creator-/Verkäufer-Onboarding unterstützt aktuell **nur Deutschland**.
-
-Alle Preise auf der Plattform werden in **Euro (EUR)** angezeigt.
+Alle Preise auf der Plattform werden in **Euro (EUR)** angezeigt. Die Provision pro Verkauf hängt von deinem Plan ab (siehe [Abschnitt 6](#6-abo-pläne)). Bei Problemen mit einer Zahlung melde dich per E-Mail (siehe [Abschnitt 14](#14-kontakt)) – nicht über ein öffentliches Issue.
 
 ---
 
 ## 8. Deine Daten & Datenschutz
 
-Dies ist eine kurze Zusammenfassung für Alpha-Tester. Das vollständige, maßgebliche Dokument ist die **Datenschutzerklärung** unter [https://ek-thunderstorm.com/privacy-terms](https://ek-thunderstorm.com/privacy-terms).
+Dies ist eine kurze Zusammenfassung. Das vollständige, maßgebliche Dokument ist die **Datenschutzerklärung** unter [https://ek-thunderstorm.com/privacy-terms](https://ek-thunderstorm.com/privacy-terms).
 
 **Verantwortlicher.** ThunderLabs UG, Baumensteinstr. 2, 89134 Blaustein, Deutschland – Verantwortlicher im Sinne von Art. 4 Nr. 7 DSGVO. Vollständige Angaben findest du im Impressum unter [https://ek-thunderstorm.com/legal-notice](https://ek-thunderstorm.com/legal-notice).
 
-**Was wir während der Alpha verarbeiten.**
+**Was wir verarbeiten.**
 - **Kontodaten** – deine E-Mail-Adresse, dein Benutzername und dein Passwort. Dein Passwort wird nie im Klartext gespeichert, sondern nur als gesalzener Hash.
-- **Aktivitätsdaten** – wie du die Plattform nutzt, zu Test- und Verbesserungszwecken.
+- **Aktivitätsdaten** – wie du die Plattform nutzt, zum Betrieb und zur Verbesserung der Plattform.
 - **Inhalte** – Communities, Beiträge, Kommentare oder Produkte, die du erstellst.
 
-**Rechtsgrundlagen.** Die Verarbeitung für deine Teilnahme am Alpha-Test stützt sich auf die Durchführung der Testvereinbarung; Aktivitäts-/Nutzungsdaten verarbeiten wir auf Grundlage unseres berechtigten Interesses am Betrieb, an der Sicherheit und an der Verbesserung der Plattform; wo das Gesetz es verlangt (z. B. bei nicht notwendigen Cookies), stützen wir uns auf deine Einwilligung.
+**Rechtsgrundlagen.** Die maßgeblichen Rechtsgrundlagen je Verarbeitung nennt die Datenschutzerklärung. Aktivitäts-/Nutzungsdaten verarbeiten wir auf Grundlage unseres berechtigten Interesses am Betrieb, an der Sicherheit und an der Verbesserung der Plattform; wo das Gesetz es verlangt (z. B. bei nicht notwendigen Cookies), stützen wir uns auf deine Einwilligung.
 
-**Zahlungsabwicklung.** Karten- und Auszahlungsdaten, die du eingibst, werden von **Stripe**, unserem Zahlungsdienstleister, im Testmodus verarbeitet.
+**Zahlungsabwicklung.** Karten- und Auszahlungsdaten, die du eingibst, werden von **Stripe**, unserem Zahlungsdienstleister, im Live-Modus verarbeitet.
 
 **US-Dienstleister (Drittlandübermittlung).** Deine Konto- und Kaufdaten werden ruhend in der EU (Hetzner, Falkenstein/Nürnberg) gespeichert. Wenige namentlich genannte US-Anbieter verarbeiten begrenzte Daten auf Grundlage der EU-Standardvertragsklauseln: **Cloudflare** (Edge-Sicherheit und DNS – verarbeitet technische Daten wie deine IP-Adresse) und **Google** (E-Mail-Versand). KI-Funktionen nutzen, sofern aktiviert, **OpenAI**.
 
-**Aufbewahrung.** Kontodaten werden für die Lebensdauer deines Kontos und 30 Tage nach einem Löschantrag aufbewahrt. Nutzungs- und Analysedaten werden innerhalb von 90 Tagen aggregiert oder anonymisiert. Steuerlich relevante Unterlagen werden 10 Jahre aufbewahrt, wo das Gesetz es verlangt (§147 AO). Wir kontaktieren alle Tester, bevor am Ende der Alpha Daten geändert werden.
+**Aufbewahrung.** Kontodaten werden für die Lebensdauer deines Kontos und 30 Tage nach einem Löschantrag aufbewahrt. Nutzungs- und Analysedaten werden innerhalb von 90 Tagen aggregiert oder anonymisiert. Steuerlich relevante Unterlagen werden 10 Jahre aufbewahrt, wo das Gesetz es verlangt (§147 AO).
 
 **Deine Rechte.** Nach der DSGVO hast du das Recht auf Auskunft, Berichtigung, Löschung, Einschränkung, Datenübertragbarkeit und Widerspruch gegen die Verarbeitung. Außerdem hast du das Recht, dich bei der zuständigen Aufsichtsbehörde zu beschweren – für die ThunderLabs UG ist das die *Landesbeauftragte für den Datenschutz und die Informationsfreiheit Baden-Württemberg* (LfDI Baden-Württemberg). Um eines dieser Rechte auszuüben oder die Löschung deines Kontos zu beantragen, schreib an **ekthunderstorminfo@gmail.com**.
 
-Mit der Teilnahme an diesem Alpha-Test bestätigst du diese Zusammenfassung und die vollständige Datenschutzerklärung.
+Maßgeblich ist immer die vollständige Datenschutzerklärung.
 
 ---
 
-## 9. Verhaltenskodex für Alpha-Tester
+## 9. Verhaltenskodex
 
-Mit der Teilnahme an diesem Alpha-Test erklärst du dich einverstanden:
+Mit der Nutzung dieses Repositories erklärst du dich einverstanden:
 
-1. **Nutze Testdaten für sensible Felder.** Eine echte E-Mail-Adresse ist für die Registrierung nötig und wird wie in [Abschnitt 8](#8-deine-daten--datenschutz) beschrieben verarbeitet. Bei optionalen Freitextfeldern (z. B. Beschreibung oder Adresse) vermeide echte persönliche Daten. **Gib niemals echte Karten-, IBAN- oder Bankdaten ein** – Stripe ist im Testmodus; nutze die Testdaten aus [Abschnitt 7](#7-zahlungstests). Gib niemals die echten Daten einer anderen Person ein.
+1. **Schütze sensible Daten.** Poste in GitHub-Issues keine Karten-, IBAN- oder Bankdaten, keine Passwörter und keine persönlichen Daten anderer Personen – auch nicht auf Screenshots. Zahlungsdaten gehören nur in die sicheren Stripe-Formulare (siehe [Abschnitt 7](#7-zahlungen)). Deine E-Mail-Adresse wird wie in [Abschnitt 8](#8-deine-daten--datenschutz) beschrieben verarbeitet.
 2. **Bleib angemessen.** Poste keine beleidigenden, schädlichen oder unangemessenen Inhalte in Foren, Communities oder Produkten.
-3. **Halte öffentliche Bewertungen bis zum Start zurück.** Fehlermeldungen und Feedback in diesem Repository sind genau das, was wir uns wünschen – bitte mach das. Was wir dich bitten zurückzuhalten: öffentliche Bewertungen, Rezensionen oder Social-Media-Beiträge über die Plattform. Sie ist Vor-Start-Software und ändert sich schnell – dein öffentliches Urteil hören wir gern, sobald wir bereit sind.
+3. **Fair und sachlich bleiben.** Fehlermeldungen und kritisches Feedback in diesem Repository sind genau das, was wir uns wünschen. Beschreibe Probleme konkret und nachvollziehbar.
 4. **Kein automatisiertes Testen.** Führe kein automatisches Scannen, keine Lasttests, keine Penetrationstests und kein API-Fuzzing durch.
 5. **Melde Sicherheitsprobleme vertraulich.** Wenn du eine Sicherheitslücke findest, schick sie uns direkt per E-Mail (siehe [Abschnitt 14](#14-kontakt)) – poste sie nicht in einem öffentlichen Issue, nutze sie nicht aus und teile sie nicht mit anderen. Gutgläubige Hinweise auf Dinge, die dir bei normaler Nutzung auffallen, sind willkommen und werden dir nie zum Nachteil ausgelegt; die Einschränkung gilt nur für *aktives* Ausnutzen oder Scannen.
-6. **Respektiere andere Tester.** Greife nicht auf Konten, Communities oder Inhalte anderer Tester zu, ändere oder lösche sie nicht.
+6. **Respektiere andere Nutzer.** Greife nicht auf Konten, Communities oder Inhalte anderer zu, ändere oder lösche sie nicht.
 7. **Bleib erreichbar.** Wenn wir zu einer Meldung von dir nachfragen, antworte bitte, wenn du kannst – das hilft uns, Probleme schneller zu lösen.
 
 ---
@@ -474,13 +455,13 @@ Jedes Feedback – positiv oder kritisch – hilft uns, die nächsten Schritte z
 ## 13. Häufige Fragen (FAQ)
 
 **F: Wird mir echtes Geld abgebucht?**
-A: Nein. Stripe ist in der Alpha im Testmodus. Solange du die Testdaten aus [Abschnitt 7](#7-zahlungstests) nutzt, gibt es keine echte Zahlung.
+A: Ja, wenn du einen kostenpflichtigen Plan buchst oder etwas kaufst. Die Alpha ist vorbei, Stripe läuft im Live-Modus; Testkarten funktionieren nicht mehr. Der Starter-Plan ist kostenlos. Siehe [Abschnitt 7](#7-zahlungen).
 
 **F: Warum ist die Plattform auf Deutsch?**
 A: Thunderstorm richtet sich an den deutschsprachigen Markt. Oben im Navigationsbereich gibt es einen Sprachumschalter.
 
 **F: Ich sehe die Tabs Dashboard, Analytik oder Inventar nicht.**
-A: Diese sind nur für Creator-/Owner-Konten sichtbar. Registriere dich über `/registration/customer`, um sie zu sehen.
+A: Diese sind nur für Creator-/Owner-Konten sichtbar. Registriere dich über `/registration/creator`, um sie zu sehen.
 
 **F: Die Kasse in meinem Shop funktioniert nicht.**
 A: Die Kasse deines Shops funktioniert erst, wenn du das **Stripe-Connect**-Zahlungs-Setup im Creator-Onboarding abgeschlossen hast. Siehe [Abschnitt 2](#2-erste-schritte).
@@ -488,11 +469,11 @@ A: Die Kasse deines Shops funktioniert erst, wenn du das **Stripe-Connect**-Zahl
 **F: Kann ich von außerhalb Deutschlands testen?**
 A: Die Plattform kannst du von überall ansehen, aber das Creator-/Verkäufer-Onboarding unterstützt aktuell **nur Deutschland** – du brauchst eine deutsche Adresse und deutsche Test-Bankdaten für den Zahlungs-Schritt.
 
-**F: Was passiert mit meinen Daten nach der Alpha?**
-A: Nach der Alpha kannst du dein Konto und deine Daten behalten oder die vollständige Löschung beantragen. Wir kontaktieren alle Tester, bevor etwas geändert wird. Siehe [Abschnitt 8](#8-deine-daten--datenschutz).
+**F: Kann ich meine Daten löschen lassen?**
+A: Ja, du kannst die vollständige Löschung deines Kontos beantragen. Siehe [Abschnitt 8](#8-deine-daten--datenschutz).
 
 **F: Kann ich die Plattform auf dem Handy nutzen?**
-A: Die Plattform ist für Desktop-Browser gemacht. Auf dem Handy kann die Darstellung in der Alpha noch unterschiedlich sein.
+A: Die Plattform ist für Desktop-Browser gemacht. Auf dem Handy kann die Darstellung noch unterschiedlich sein.
 
 **F: Woher weiß ich, wann es Updates gibt?**
 A: Wir aktualisieren den Abschnitt [Was ist neu](#was-ist-neu) oben auf dieser Seite und melden uns bei größeren Änderungen ggf. per E-Mail.
@@ -509,4 +490,4 @@ Für Fragen, Probleme oder Feedback:
 
 ---
 
-Danke, dass du Teil der Thunderstorm-Alpha bist! Deine Zeit und dein Feedback bedeuten uns wirklich viel. Jede Meldung, jeder Vorschlag und jeder Eindruck hilft uns, eine bessere Plattform für Creator und ihre Communities zu bauen. 🚀
+Danke, dass du Teil von Thunderstorm bist! Deine Zeit und dein Feedback bedeuten uns wirklich viel. Jede Meldung, jeder Vorschlag und jeder Eindruck hilft uns, eine bessere Plattform für Creator und ihre Communities zu bauen. 🚀
